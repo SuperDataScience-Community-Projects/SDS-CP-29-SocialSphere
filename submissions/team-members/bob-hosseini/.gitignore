@@ -1,0 +1,16 @@
+# Environment variables
+.env
+
+# virtual environment
+*env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# TODOs
+TODOS.md
+
+# Temp files
+*temp*
