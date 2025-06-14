@@ -5,40 +5,22 @@ This module contains reusable functions for data preprocessing, model training,
 evaluation, and visualization used in the classification notebooks.
 """
 
-import pandas as pd
-import numpy as np
+# Standard library imports
+import json
+
+# Third-party imports
 import matplotlib.pyplot as plt
-import seaborn as sns
-import pickle
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
-from sklearn.compose import ColumnTransformer
-from sklearn.pipeline import Pipeline
-from sklearn.impute import SimpleImputer
-from sklearn.metrics import classification_report, confusion_matrix, roc_auc_score
 import mlflow
 import mlflow.sklearn
+import numpy as np
+import pandas as pd
+import seaborn as sns
+from mlflow.models.signature import infer_signature
+from sklearn.dummy import DummyClassifier
+from sklearn.model_selection import cross_validate
+from sklearn.pipeline import Pipeline
 
-
-def load_cleaned_data(file_path):
-    """
-    Load cleaned data from pickle file.
-    
-    Parameters:
-    -----------
-    file_path : str
-        Path to the pickle file containing cleaned data
-        
-    Returns:
-    --------
-    pd.DataFrame
-        Loaded dataframe
-    """
-    with open(file_path, 'rb') as f:
-        df = pickle.load(f)
-    return df
-
-
+# ================== Data preprocessing ==================
 def create_binary_conflict(df, target_column='Conflicts', threshold=None, visualize=True):
     """
     Create binary conflict classification (High vs Low) from conflict scores.
@@ -132,136 +114,7 @@ def create_binary_conflict(df, target_column='Conflicts', threshold=None, visual
     return df_copy, results
 
 
-def visualize_target_distribution(df, original_column, binary_column, threshold):
-    """
-    Visualize original and binary target distributions.
-    
-    Parameters:
-    -----------
-    df : pd.DataFrame
-        Input dataframe
-    original_column : str
-        Name of original target column
-    binary_column : str
-        Name of binary target column
-    threshold : float
-        Threshold value used for binary conversion
-    """
-    plt.figure(figsize=(10, 4))
-    
-    # Original distribution
-    plt.subplot(1, 2, 1)
-    df[original_column].hist(bins=20, alpha=0.7)
-    plt.axvline(threshold, color='red', linestyle='--', label=f'Threshold: {threshold}')
-    plt.xlabel(original_column.replace('_', ' ').title())
-    plt.ylabel('Frequency')
-    plt.title('Original Target Distribution')
-    plt.legend()
-    
-    # Binary distribution
-    plt.subplot(1, 2, 2)
-    df[binary_column].value_counts().plot(kind='bar')
-    plt.xlabel('Conflict Level')
-    plt.ylabel('Count')
-    plt.title('Binary Target Distribution')
-    plt.xticks([0, 1], ['Low', 'High'], rotation=0)
-    
-    plt.tight_layout()
-    plt.show()
-
-def downsample_majority_class(df, target_column):
-    """
-    Downsample the majority class to balance the dataset
-    
-    Parameters:
-    df (pd.DataFrame): The input dataframe
-    target_column (str): The name of the target column (e.g., 'Conflict_Binary')
-    
-    Returns:
-    pd.DataFrame: Balanced dataframe with downsampled majority class
-    dict: Information about the downsampling process
-    """
-    from sklearn.utils import resample
-    
-    # Get class counts
-    class_counts = df[target_column].value_counts()
-    majority_class = class_counts.idxmax()
-    minority_class = class_counts.idxmin()
-    
-    majority_count = class_counts[majority_class]
-    minority_count = class_counts[minority_class]
-    
-    # Calculate target size for majority class
-    target_majority_size = int(minority_count)
-    print(f"Target majority size: {target_majority_size}")
-    
-    # If target size is greater than current majority size, no downsampling needed
-    if target_majority_size >= majority_count:
-        print(f"No downsampling needed. Current ratio: {minority_count/majority_count:.2f}")
-        return df, {
-            'original_majority_count': majority_count,
-            'original_minority_count': minority_count,
-            'final_majority_count': majority_count,
-            'final_minority_count': minority_count,
-            'downsampled': False
-        }
-    
-    # Separate majority and minority classes
-    df_majority = df[df[target_column] == majority_class]
-    df_minority = df[df[target_column] == minority_class]
-    
-    # Downsample majority class
-    df_majority_downsampled = resample(
-        df_majority,
-        replace=False,  # sample without replacement
-        n_samples=target_majority_size,
-        random_state=42
-    )
-    
-    # Combine minority class with downsampled majority class
-    df_balanced = pd.concat([df_minority, df_majority_downsampled])
-    
-    # Shuffle the dataset
-    df_balanced = df_balanced.sample(frac=1, random_state=42).reset_index(drop=True)
-    
-    # Print results
-    print(f"Original dataset:")
-    print(f"  {majority_class}: {majority_count}")
-    print(f"  {minority_class}: {minority_count}")
-    print(f"  Ratio (minority/majority): {minority_count/majority_count:.2f}")
-    
-    print(f"\nBalanced dataset:")
-    print(f"  {majority_class}: {target_majority_size}")
-    print(f"  {minority_class}: {minority_count}")
-    print(f"  Ratio (minority/majority): {minority_count/target_majority_size:.2f}")
-    
-    return df_balanced, {
-        'original_majority_count': majority_count,
-        'original_minority_count': minority_count,
-        'final_majority_count': target_majority_size,
-        'final_minority_count': minority_count,
-        'downsampled': True,
-        'samples_removed': majority_count - target_majority_size
-    }
-
-def identify_feature_types(X):
-    """
-    Identify numeric and categorical features in dataset.
-    
-    Parameters:
-    -----------
-    X : pd.DataFrame
-        Feature dataframe
-        
-    Returns:
-    --------
-    tuple
-        (numeric_features, categorical_features) as lists
-    """
-    numeric_features = X.select_dtypes(include=['int64', 'float64']).columns.tolist()
-    categorical_features = X.select_dtypes(include=['object']).columns.tolist()
-    return numeric_features, categorical_features
-
+# ================== Feature engineering ==================
 
 def encode_onehot_with_reference(df, column_name, prefix=None):
     """One-hot encoding with smallest category as reference (dropped)"""
@@ -291,119 +144,8 @@ def encode_onehot_with_reference(df, column_name, prefix=None):
     return df, dummies
 
 
-# Grouping Platforms with category size less than 10% of the total
-def group_and_encode_features(df_data, target_column, threshold=30, visualize=True):
-    """
-    Group categorical features with low frequency into 'Other' category and apply one-hot encoding
-    
-    Parameters:
-    df_data (pd.DataFrame): The input dataframe
-    target_column (str): The name of the categorical column to group and encode
-    threshold (int): Minimum count threshold for keeping categories separate (default: 30)
-    visualize (bool): Whether to show visualizations (default: True)
-    
-    Returns:
-    pd.DataFrame: DataFrame with grouped and one-hot encoded features
-    dict: Summary information about the grouping process
-    """
-    import pandas as pd
-    import matplotlib.pyplot as plt
-    import seaborn as sns
-    
-    # Make a copy to avoid modifying original data
-    df_processed = df_data.copy()
-    
-    # Get original value counts
-    original_counts = df_processed[target_column].value_counts()
-    
-    # Create grouped column name
-    grouped_column = f"{target_column}_group"
-    
-    # Group categories with count less than threshold into 'Other'
-    df_processed[grouped_column] = df_processed[target_column].apply(
-        lambda x: 'Other' if original_counts[x] < threshold else x
-    )
-    
-    # Get grouped value counts
-    grouped_counts = df_processed[grouped_column].value_counts()
-    
-    # Print summary
-    print(f"=== Feature Grouping Summary for '{target_column}' ===")
-    print(f"Threshold: {threshold}")
-    print(f"Original categories: {len(original_counts)}")
-    print(f"Grouped categories: {len(grouped_counts)}")
-    print(f"Categories moved to 'Other': {len(original_counts) - len(grouped_counts) + (1 if 'Other' in grouped_counts else 0)}")
-    
-    print(f"\nOriginal distribution:")
-    for category, count in original_counts.head(10).items():
-        status = "→ Other" if count < threshold else "→ Kept"
-        print(f"  {category}: {count} {status}")
-    if len(original_counts) > 10:
-        print(f"  ... and {len(original_counts) - 10} more categories")
-    
-    print(f"\nGrouped distribution:")
-    for category, count in grouped_counts.items():
-        print(f"  {category}: {count}")
-    
-    # Visualize if requested
-    if visualize:
-        fig, axes = plt.subplots(1, 2, figsize=(15, 6))
-        
-        # Original distribution (top 10 categories)
-        top_original = original_counts.head(10)
-        axes[0].bar(range(len(top_original)), top_original.values)
-        axes[0].set_title(f'Original Distribution of {target_column}\n(Top 10 categories)')
-        axes[0].set_xlabel('Categories')
-        axes[0].set_ylabel('Count')
-        axes[0].set_xticks(range(len(top_original)))
-        axes[0].set_xticklabels(top_original.index, rotation=45, ha='right')
-        
-        # Add threshold line
-        axes[0].axhline(y=threshold, color='red', linestyle='--', alpha=0.7, label=f'Threshold ({threshold})')
-        axes[0].legend()
-        
-        # Grouped distribution
-        axes[1].bar(range(len(grouped_counts)), grouped_counts.values)
-        axes[1].set_title(f'Grouped Distribution of {grouped_column}')
-        axes[1].set_xlabel('Categories')
-        axes[1].set_ylabel('Count')
-        axes[1].set_xticks(range(len(grouped_counts)))
-        axes[1].set_xticklabels(grouped_counts.index, rotation=45, ha='right')
-        
-        plt.tight_layout()
-        plt.show()
-    
-    # One-hot encode the grouped column
-    df_encoded = pd.get_dummies(df_processed, columns=[grouped_column], prefix=target_column)
-    
-    # Get the new one-hot encoded columns
-    encoded_columns = [col for col in df_encoded.columns if col.startswith(f'{target_column}_')]
-    
-    print(f"\nOne-hot encoded columns created:")
-    for col in encoded_columns:
-        print(f"  {col}")
-    
-    # Show sample of encoded features
-    print(f"\nSample of encoded features:")
-    print(df_encoded[encoded_columns].head())
-    
-    # Create summary dictionary
-    summary = {
-        'original_categories': len(original_counts),
-        'grouped_categories': len(grouped_counts),
-        'threshold_used': threshold,
-        'categories_moved_to_other': len(original_counts) - len(grouped_counts) + (1 if 'Other' in grouped_counts else 0),
-        'original_distribution': original_counts.to_dict(),
-        'grouped_distribution': grouped_counts.to_dict(),
-        'encoded_columns': encoded_columns,
-        'grouped_column_name': grouped_column
-    }
-    
-    return df_encoded, summary
 
-# ================== Feature engineering
-
-# 3. Frequency-based encoding for Country and Platform
+# Frequency-based encoding for Country and Platform
 def encode_frequency(df, column_name):
     freq = df[column_name].value_counts().to_dict()
     df[f'{column_name}_freq_encoded'] = df[column_name].map(freq)
@@ -531,6 +273,7 @@ class RareCategoryGrouper(BaseEstimator, TransformerMixin):
         out = series.where(series.isin(self.frequent_categories_), "Other")
         # Return as 2-D (n_samples, 1)
         return out.to_frame()
+    
 
 # Transformer to map country to continent
 continent_dict = {
@@ -597,4 +340,181 @@ class CountryToContinentMapper(BaseEstimator, TransformerMixin):
         mapped = pd.Series(flat).map(self.mapping)
         return mapped.fillna("Other").to_frame()
 
+
+
+# Helper to extract feature names even when some transformers lack get_feature_names_out
+def get_feature_names(column_transformer):
+    feature_names = []
+    for name, transformer, cols in column_transformer.transformers_:
+        # Skip dropped columns or remainder
+        if transformer == 'drop' or name == 'remainder':
+            continue
+
+        # Normalize cols into a list
+        input_cols = list(cols) if isinstance(cols, (list, tuple)) else [cols]
+
+        # If it's a pipeline, grab its last step
+        tr = transformer.steps[-1][1] if isinstance(transformer, Pipeline) else transformer
+
+        # Attempt to get feature names
+        if hasattr(tr, 'get_feature_names_out'):
+            try:
+                # First try passing the original column names
+                names = tr.get_feature_names_out(input_cols)
+            except Exception:
+                try:
+                    # Fallback to no-arg version
+                    names = tr.get_feature_names_out()
+                except Exception:
+                    # Final fallback: use the input column names
+                    names = input_cols
+        else:
+            # Transformer has no naming method
+            names = input_cols
+
+        feature_names.extend(names)
+    return feature_names
+
+
+# ===============================
+# Classification Pipelines
+# ===============================
+
+def mlflow_dataset(X_train_full, X_test):
+    train_ds = mlflow.data.from_pandas(
+        df=X_train_full,
+        source="../data/data_cleaned.pickle",
+        name="social_sphere_train_v1"
+    )
+    test_ds = mlflow.data.from_pandas(
+        df=X_test,
+        source="../data/data_cleaned.pickle",
+        name="social_sphere_test_v1"
+    )
+    return {"train_ds": train_ds, "test_ds": test_ds}
+
+
+def run_and_register_dummy_baseline(
+    X_train_full,
+    y_train_full,
+    preprocessor,
+    strategy: str,
+    cv,
+    scoring,
+    dataset,
+    registered_model_name: str = "conflict_baseline_dummy"
+):
+    """
+    Runs cross‐validation for a single DummyClassifier strategy, logs metrics to MLflow,
+    refits on the full training set, and registers the model.
+
+    Parameters:
+    - X_train_full, y_train_full: training data
+    - preprocessor: sklearn Pipeline or ColumnTransformer for feature prep
+    - strategy: one of DummyClassifier strategies ("most_frequent", "stratified", "uniform", "prior")
+    - cv: cross‐validation splitter (e.g., StratifiedKFold instance)
+    - experiment_name: MLflow experiment under which runs are logged
+    - registered_model_name: name to register the final model in MLflow
+    """
     
+    run_name = f"baseline_dummy_{strategy}_cv"
+    with mlflow.start_run(run_name=run_name):
+        # Log inputs
+        mlflow.log_input(dataset["train_ds"], context="training")    
+        mlflow.log_input(dataset["test_ds"], context="test")
+
+        # build pipeline
+        baseline_pipeline = Pipeline([
+            ("preprocessing", preprocessor),
+            ("classifier", DummyClassifier(strategy=strategy))
+        ])
+
+        # log strategy
+        mlflow.log_param("strategy", strategy)
+
+        # cross‐validate
+        cv_results = cross_validate(
+            estimator=baseline_pipeline,
+            X=X_train_full,
+            y=y_train_full,
+            cv=cv,
+            scoring=scoring,
+            return_train_score=False,
+            n_jobs=-1
+        )
+
+        # log mean and std for each metric
+        for metric in scoring:
+            scores = cv_results[f"test_{metric}"]
+            mlflow.log_metric(metric,      scores.mean())
+            mlflow.log_metric(f"{metric}_std", scores.std())
+
+        # raw fold scores as artifact
+        with open("cv_fold_scores.json", "w") as fp:
+            json.dump({k: v.tolist() for k, v in cv_results.items()}, fp)
+        mlflow.log_artifact("cv_fold_scores.json")
+
+        # refit on full training data
+        baseline_pipeline.fit(X_train_full, y_train_full)
+
+        # infer signature and example
+        example_input = X_train_full.iloc[:5]
+        example_preds = baseline_pipeline.predict(example_input)
+        signature = infer_signature(example_input, example_preds)
+
+        # log & register
+        mlflow.sklearn.log_model(
+            sk_model=baseline_pipeline,
+            name=f"baseline_model_cv_{strategy}",
+            registered_model_name=f"{registered_model_name}_{strategy}",
+            signature=signature,
+            input_example=example_input
+        )
+
+
+def run_classification_experiment(
+    name: str,
+    estimator,                # e.g. Pipeline([('preproc', preprocessor), ('clf', LogisticRegression(...))])
+    X_train, y_train,
+    cv,
+    scoring,            # dict of scoring metrics
+    dataset,
+    hparams,
+    registered_model_name: str = "conflict_baseline_dummy"
+):
+    with mlflow.start_run(run_name=name):
+        # Log inputs
+        mlflow.log_input(dataset["train_ds"], context="training")    
+        mlflow.log_input(dataset["test_ds"], context="test")
+
+        # log strategy
+        mlflow.log_param("hyperparameters", hparams)
+
+        # 2) Cross-validate & log CV metrics
+        cv_results = cross_validate(
+            estimator=estimator,
+            X=X_train, y=y_train,
+            cv=cv,
+            scoring=scoring,
+            return_train_score=False,
+            n_jobs=-1
+        )
+        for metric, scores in cv_results.items():
+            if metric.startswith("test_"):
+                mlflow.log_metric(metric.replace("test_", ""), scores.mean().round(2))
+
+        # 3) Re-fit on full train and register model
+        estimator.fit(X_train, y_train)
+
+        # 4) Infer signature & input example for better model packaging
+        example_input = X_train.iloc[:5]
+        preds = estimator.predict(example_input)
+        signature = infer_signature(example_input, preds)
+
+        mlflow.sklearn.log_model(
+            sk_model=estimator,
+            name=name,
+            registered_model_name=registered_model_name,
+            signature=signature,
+            input_example=example_input
+        )
