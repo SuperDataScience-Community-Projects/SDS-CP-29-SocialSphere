@@ -1,0 +1,706 @@
+Age,Gender,Academic_Level,Country,Avg_Daily_Usage_Hours,Most_Used_Platform,Affects_Academic_Performance,Sleep_Hours_Per_Night,Mental_Health_Score,Relationship_Status,High_Conflict,Addiction_Level,Gender_encoded,Academic_Level_encoded,Country_encoded,Most_Used_Platform_encoded,Affects_Academic_Performance_encoded,Relationship_Status_encoded,PCA1,PCA2,UMAP1,UMAP2
+19,Female,Undergraduate,Bangladesh,5.2,Instagram,Yes,6.5,6,In Relationship,1,Medium-High,0,2,10,1,1,1,-0.7466433417012351,1.5526666686899742,11.447189,1.6449668
+22,Male,Graduate,India,2.1,Twitter,No,7.5,8,Single,0,Low,1,0,39,7,0,2,3.066124605224506,-1.2253367715040833,-4.7619863,8.587299
+20,Female,Undergraduate,USA,6.0,TikTok,Yes,5.0,5,Complicated,1,High,0,2,102,6,1,0,-2.708740499091018,0.5969496858650303,10.077387,1.2573799
+18,Male,High School,UK,3.0,YouTube,No,7.0,7,Single,0,Low,1,1,101,11,0,2,0.9136639458220952,0.5457867628060707,-3.7530105,1.783024
+21,Male,Graduate,Canada,4.5,Facebook,Yes,6.0,6,In Relationship,0,Medium-Low,1,0,18,0,1,1,0.0724127882162727,-1.3565948818280527,13.416439,6.915297
+19,Female,Undergraduate,Australia,7.2,Instagram,Yes,4.5,4,Complicated,1,High,0,2,5,1,1,0,-3.1607230910866084,0.8512260921927233,10.86839,1.4235204
+23,Male,Graduate,Germany,1.5,LinkedIn,No,8.0,9,Single,0,Low,1,0,33,4,0,2,4.24172413250085,-1.2341848391943824,-4.7800474,8.69608
+20,Female,Undergraduate,Brazil,5.8,Snapchat,Yes,6.0,6,In Relationship,0,Medium-High,0,2,16,5,1,1,-1.2899441091037027,0.8278216710681943,11.566699,1.7220622
+18,Male,High School,Japan,4.0,TikTok,No,6.5,7,Single,0,Low,1,1,46,6,0,2,0.870740254915307,0.611477248475845,-3.6328301,1.695271
+21,Female,Graduate,South Korea,3.3,Instagram,No,7.0,7,In Relationship,0,Low,0,0,89,1,0,1,1.6716408638578872,0.2976004366685562,-3.8026783,9.375475
+19,Male,Undergraduate,France,4.8,Snapchat,Yes,6.2,5,Complicated,1,Medium-Low,1,2,31,5,1,0,-1.2267923058037788,0.08722209215782803,11.380927,0.8721877
+20,Female,Undergraduate,Spain,5.5,TikTok,Yes,5.8,6,In Relationship,0,Medium-High,0,2,90,6,1,1,-1.7082453588837267,0.919194866085315,10.787588,1.8507345
+22,Male,Graduate,Italy,2.8,LinkedIn,No,7.2,8,Single,0,Low,1,0,44,4,0,2,2.795533066488937,-1.1179245179465953,-4.8614593,8.632174
+18,Female,High School,Mexico,6.5,Instagram,Yes,5.5,5,Single,1,High,0,1,61,1,1,2,-2.370034239153013,1.2598405428930497,13.073055,-1.2917252
+21,Male,Undergraduate,Russia,3.7,YouTube,No,6.8,7,In Relationship,0,Low,1,2,82,11,0,1,0.9072747617634763,-0.24467104651482421,-3.6023808,2.0560954
+20,Female,Undergraduate,China,4.2,TikTok,Yes,6.0,6,Complicated,1,Medium-Low,0,2,20,6,1,0,-0.7240493331787838,0.7815286346717327,11.12295,1.4036443
+24,Male,Graduate,Sweden,2.0,LinkedIn,No,7.8,8,Single,0,Low,1,0,92,4,0,2,3.3286305038728585,-1.6482286200584257,-4.4785643,8.904503
+19,Female,High School,Norway,5.0,Instagram,Yes,5.7,5,In Relationship,1,Medium-High,0,1,71,1,1,1,-1.6231022604451373,0.9213030493188675,10.443539,2.0727198
+21,Male,Undergraduate,Denmark,3.5,Facebook,No,6.7,7,Single,0,Low,1,2,26,0,0,2,1.7650888209294762,0.4747346483654891,-2.9255714,1.7910925
+20,Female,Undergraduate,Netherlands,4.7,Snapchat,Yes,5.9,6,Complicated,1,Medium-Low,0,2,67,5,1,0,-1.1628090942534468,0.8856311486488607,10.926315,1.5444427
+18,Male,High School,Belgium,5.3,TikTok,Yes,5.5,5,Single,1,Medium-High,1,1,12,6,1,2,-1.673453530771959,-0.08975973306501675,12.210487,0.18283336
+23,Female,Graduate,Switzerland,2.5,LinkedIn,No,7.3,8,In Relationship,0,Low,0,0,93,4,0,1,2.6131668479969274,-0.4534481418937809,-4.007391,9.170425
+19,Male,Undergraduate,Austria,4.9,Instagram,Yes,5.8,6,Complicated,1,Medium-Low,1,2,6,1,1,0,-0.6563190901568339,0.32801192082936,11.391474,0.9629348
+20,Female,Undergraduate,Portugal,5.7,TikTok,Yes,5.4,5,Single,1,Medium-High,0,2,79,6,1,2,-2.352382284362989,0.8791964929439995,14.165126,-2.0233645
+22,Male,Graduate,Greece,3.2,Facebook,No,6.9,7,In Relationship,0,Low,1,0,35,0,0,1,2.349099785112772,-1.1688466300119547,-3.5226424,10.212529
+19,Female,High School,Ireland,6.1,Instagram,Yes,5.2,5,Complicated,1,High,0,1,42,1,1,0,-2.06807859523134,0.5844318890304374,10.698777,1.4648699
+21,Male,Undergraduate,New Zealand,3.8,YouTube,No,6.6,7,Single,0,Low,1,2,68,11,0,2,0.8394597463314852,-0.17214174132559282,-3.6894376,1.9443752
+20,Female,Undergraduate,Singapore,4.4,TikTok,Yes,5.9,6,In Relationship,1,Medium-Low,0,2,85,6,1,1,-1.2185765016595562,1.0152587767459504,10.858431,1.980596
+24,Male,Graduate,Malaysia,2.2,LinkedIn,No,7.4,8,Single,0,Low,1,0,58,4,0,2,3.2729873980121513,-1.7760514918132086,-4.56811,8.774971
+19,Female,High School,Thailand,5.9,Instagram,Yes,5.3,5,Complicated,1,Medium-High,0,1,97,1,1,0,-2.249391730550392,0.7232933442009237,10.267716,1.649773
+21,Male,Undergraduate,Vietnam,3.6,Facebook,No,6.7,7,Single,0,Low,1,2,108,0,0,2,1.2811296077027645,0.6315414795111605,-3.0398211,1.8428249
+20,Female,Undergraduate,Philippines,4.8,Snapchat,Yes,5.7,6,In Relationship,1,Medium-Low,0,2,77,5,1,1,-1.3610542309773734,1.006601655105391,10.9411545,1.9662486
+18,Male,High School,Indonesia,5.4,TikTok,Yes,5.4,5,Complicated,1,Medium-High,1,1,40,6,1,0,-1.8575088714279624,-0.3131659424849166,11.359321,0.70064634
+23,Female,Graduate,Taiwan,2.6,LinkedIn,No,7.2,8,Single,0,Low,0,0,95,4,0,2,2.4993417133867513,-0.33817554662862265,-4.2215223,8.9353485
+19,Male,Undergraduate,Hong Kong,4.7,Instagram,Yes,5.8,6,In Relationship,1,Medium-Low,1,2,36,1,1,1,-0.7664005081533694,0.5363502263568931,11.539404,0.9535808
+20,Female,Undergraduate,Turkey,5.6,TikTok,Yes,5.5,5,Complicated,1,Medium-High,0,2,99,6,1,0,-2.334428396930275,0.6779427412656545,10.281872,1.3421249
+22,Male,Graduate,Israel,3.1,Facebook,No,6.8,7,Single,0,Low,1,0,43,0,0,2,2.279313051138141,-1.0240625213947725,-5.381365,8.744873
+19,Female,High School,UAE,6.2,Instagram,Yes,5.1,5,In Relationship,1,High,0,1,100,1,1,1,-2.4862406795227003,0.8127339539192928,9.776629,2.1075158
+21,Male,Undergraduate,Egypt,3.9,YouTube,No,6.5,7,Complicated,0,Medium-Low,1,2,28,11,0,0,1.0249564160026325,-0.532798021002839,-3.1852841,2.3890781
+20,Female,Undergraduate,Morocco,4.5,TikTok,Yes,5.8,6,Single,1,Medium-Low,0,2,65,6,1,2,-1.212840691752125,1.086126937516085,14.320829,-2.0626187
+24,Male,Graduate,South Africa,2.3,LinkedIn,No,7.3,8,In Relationship,0,Low,1,0,88,4,0,1,3.0543731832416734,-1.8650353435526235,-4.2681713,9.038224
+19,Female,High School,Nigeria,5.8,Instagram,Yes,5.4,5,Complicated,1,Medium-High,0,1,69,1,1,0,-2.0179569952140968,0.6859283718044027,10.616059,1.5134144
+21,Male,Undergraduate,Kenya,3.7,Facebook,No,6.6,7,Single,0,Low,1,2,49,0,0,2,1.522504062049736,0.49330709731372363,-3.016142,1.8375847
+20,Female,Undergraduate,Ghana,4.6,Snapchat,Yes,5.7,6,In Relationship,1,Medium-Low,0,2,34,5,1,1,-1.0507209993707927,0.9372123825366799,11.386642,1.744606
+18,Male,High School,Argentina,5.5,TikTok,Yes,5.3,5,Single,1,Medium-High,1,1,3,6,1,2,-1.7830747562788893,-0.1462247083709083,12.232697,0.17192401
+23,Female,Graduate,Chile,2.7,LinkedIn,No,7.1,8,Complicated,0,Low,0,0,19,4,0,0,2.8804835649958016,-0.7714936282068169,-3.2616699,9.4338455
+19,Male,Undergraduate,Colombia,4.8,Instagram,Yes,5.9,6,In Relationship,1,Medium-Low,1,2,21,1,1,1,-0.6822613528087357,0.5078230249449597,11.538415,0.9299646
+20,Female,Undergraduate,Peru,5.5,TikTok,Yes,5.6,5,Single,1,Medium-High,0,2,76,6,1,2,-2.1775459982100913,0.9114408676162414,14.060776,-1.9608401
+22,Male,Graduate,Venezuela,3.3,Facebook,No,6.7,7,In Relationship,0,Low,1,0,107,0,0,1,1.8375998657248236,-1.0531219445231133,-4.067831,9.870491
+19,Female,High School,Ecuador,6.3,Instagram,Yes,5.2,5,Complicated,1,High,0,1,27,1,1,0,-2.06320570038241,0.5367549252031767,10.775296,1.3829653
+21,Male,Undergraduate,Uruguay,3.8,YouTube,No,6.4,7,Single,0,Medium-Low,1,2,104,11,0,2,0.5619279743607054,-0.12037825122009999,-3.6807125,1.964449
+20,Female,Undergraduate,Paraguay,4.7,TikTok,Yes,5.8,6,In Relationship,1,Medium-Low,0,2,75,6,1,1,-1.320142809242149,0.9585239674340497,10.94301,1.9306427
+24,Male,Graduate,Bolivia,2.4,LinkedIn,No,7.2,8,Complicated,0,Low,1,0,14,4,0,0,3.400956160736251,-2.163931067450332,-3.060214,9.788594
+19,Female,High School,Costa Rica,5.7,Instagram,Yes,5.5,5,Single,1,Medium-High,0,1,22,1,1,2,-1.7306444752019776,0.8709852968876906,13.374312,-0.9422194
+21,Male,Undergraduate,Panama,3.6,Facebook,No,6.5,7,In Relationship,0,Low,1,2,74,0,0,1,1.4077087201736085,0.41163254167882124,-2.7940931,1.9196922
+20,Female,Undergraduate,Jamaica,4.9,Snapchat,Yes,5.6,6,Complicated,1,Medium-Low,0,2,45,5,1,0,-1.242723965743684,0.7924780334254549,11.017424,1.4605098
+18,Male,High School,Trinidad,5.6,TikTok,Yes,5.2,5,Single,1,Medium-High,1,1,98,6,1,2,-2.3786269135551703,0.026371950896822177,11.842697,-0.15201129
+23,Female,Graduate,Bahamas,2.8,LinkedIn,No,7.0,8,In Relationship,0,Low,0,0,8,4,0,1,2.837308079418757,-0.6824600169614454,-3.388603,9.278235
+19,Male,Undergraduate,Iceland,4.6,Instagram,Yes,5.9,6,Complicated,1,Medium-Low,1,2,38,1,1,0,-0.6743137270918483,0.42915116463628483,11.436557,0.96724147
+20,Female,Undergraduate,Finland,5.4,TikTok,Yes,5.7,5,Single,1,Medium-High,0,2,30,6,1,2,-1.8482886719048448,0.837744994269246,14.207333,-1.3739498
+22,Male,Graduate,Poland,3.1,Facebook,No,7.1,7,Single,0,Low,1,0,78,0,0,2,2.2119323426367163,-0.9220716351867788,-5.6467566,8.835943
+19,Female,Undergraduate,Romania,5.6,Instagram,Yes,5.6,5,In Relationship,1,Medium-High,0,2,81,1,1,1,-2.0940892236285205,1.4781431497798811,10.174651,2.1628113
+20,Male,Undergraduate,Hungary,4.2,TikTok,Yes,6.0,6,Complicated,1,Medium-Low,1,2,37,6,1,0,-0.5999069664276973,-0.2233121994404894,11.417296,0.86888677
+18,Female,High School,Czech Republic,6.1,Snapchat,Yes,5.2,4,Single,1,High,0,1,25,5,1,2,-2.7806317318602294,0.8488870559358386,13.374555,-1.3247738
+23,Male,Graduate,Slovakia,2.3,LinkedIn,No,7.4,8,In Relationship,0,Low,1,0,86,4,0,1,2.985328562014918,-1.4788798083403751,-4.275952,9.068007
+21,Female,Undergraduate,Croatia,4.8,Instagram,Yes,5.8,6,Single,1,Medium-Low,0,2,23,1,1,2,-0.7325797052374775,0.9114632862306856,13.782909,-0.63616776
+20,Male,Undergraduate,Serbia,3.9,YouTube,No,6.5,7,Complicated,0,Medium-Low,1,2,84,11,0,0,0.5997623733039271,-0.0400254052923469,-3.2770655,2.3437486
+19,Female,High School,Slovenia,5.7,TikTok,Yes,5.4,5,In Relationship,1,Medium-High,0,1,87,6,1,1,-2.3472663957179614,0.5453920536087192,10.085804,1.4610794
+22,Male,Graduate,Bulgaria,2.8,LinkedIn,No,7.2,8,Single,0,Low,1,0,17,4,0,2,2.9422669529423646,-1.1724208693723066,-4.939055,8.613905
+20,Female,Undergraduate,Estonia,4.5,Instagram,Yes,5.9,6,Complicated,1,Medium-Low,0,2,29,1,1,0,-0.68275274244346,1.079096526268411,11.092676,1.4628069
+18,Male,High School,Latvia,5.4,Snapchat,Yes,5.5,5,Single,1,Medium-High,1,1,53,5,1,2,-1.8853706045901406,0.04748406256341248,12.011937,0.009218972
+21,Female,Graduate,Lithuania,3.2,Facebook,No,6.8,7,In Relationship,0,Low,0,0,56,0,0,1,1.8566426716154931,0.28198676296255804,-3.776959,9.389045
+19,Male,Undergraduate,Ukraine,4.9,TikTok,Yes,5.7,6,Complicated,1,Medium-Low,1,2,103,6,1,0,-1.4705375364022109,0.1973925368149974,11.180838,0.4915303
+20,Female,Undergraduate,Moldova,5.8,Instagram,Yes,5.3,5,Single,1,Medium-High,0,2,62,1,1,2,-2.0931404646028726,1.1416876295363032,13.018879,-1.551439
+23,Male,Graduate,Belarus,2.5,LinkedIn,No,7.3,8,In Relationship,0,Low,1,0,11,4,0,1,3.2753334650772485,-1.6581089312336106,-3.0071654,9.841662
+21,Female,Undergraduate,Kazakhstan,4.6,Snapchat,Yes,5.8,6,Single,1,Medium-Low,0,2,48,5,1,2,-0.9886945460972733,0.7265613506617473,14.224652,-1.8007017
+19,Male,High School,Uzbekistan,5.5,TikTok,Yes,5.4,5,Complicated,1,Medium-High,1,1,105,6,1,0,-2.1282229890553634,-0.570414774990377,11.144051,0.56425244
+22,Female,Graduate,Kyrgyzstan,2.9,Facebook,No,7.0,7,In Relationship,0,Low,0,0,52,0,0,1,2.1960936046523423,-0.05882978532053276,-3.7159262,9.340824
+20,Male,Undergraduate,Tajikistan,4.7,YouTube,Yes,5.9,6,Single,1,Medium-Low,1,2,96,11,1,2,-1.4466052760374575,-0.21336200289965182,11.716154,-0.13945034
+18,Female,High School,Armenia,5.9,Instagram,Yes,5.2,5,Complicated,1,High,0,1,4,1,1,0,-1.9057753985781019,0.9048776794792085,10.834605,1.3169203
+21,Male,Graduate,Georgia,3.0,LinkedIn,No,7.1,8,In Relationship,0,Low,1,0,32,4,0,1,2.64599150548256,-0.9206379323345869,-2.9748416,10.118766
+19,Female,Undergraduate,Azerbaijan,4.8,TikTok,Yes,5.7,6,Single,1,Medium-Low,0,2,7,6,1,2,-1.1744038497683686,1.312252871756382,14.3343725,-1.127375
+20,Male,Undergraduate,Cyprus,3.8,Facebook,No,6.6,7,Complicated,0,Medium-Low,1,2,24,0,0,0,1.54656810791234,0.553118870413062,-2.5408418,1.8931369
+22,Female,Graduate,Malta,2.7,LinkedIn,No,7.2,8,In Relationship,0,Low,0,0,60,4,0,1,2.554061945780849,-0.16816201648244825,-3.7413552,9.250632
+18,Male,High School,Luxembourg,5.6,Snapchat,Yes,5.3,5,Single,1,Medium-High,1,1,57,5,1,2,-2.0656414791302025,0.017258071277307857,12.00772,0.0137302745
+21,Female,Undergraduate,Monaco,4.5,Instagram,Yes,5.8,6,Complicated,1,Medium-Low,0,2,63,1,1,0,-0.7876149496059517,0.7575292594125614,10.9994755,1.600125
+19,Male,High School,Andorra,5.3,TikTok,Yes,5.5,5,In Relationship,1,Medium-High,1,1,2,6,1,1,-1.4745608565426511,-0.620072303921397,12.102288,0.39813825
+23,Female,Graduate,San Marino,2.6,LinkedIn,No,7.3,8,Single,0,Low,0,0,83,4,0,2,2.605500069049157,-0.35194699136454444,-4.2868485,8.922225
+20,Male,Undergraduate,Vatican City,4.4,YouTube,Yes,6.0,6,Complicated,1,Medium-Low,1,2,106,11,1,0,-1.297659573774574,-0.41739837540417213,11.1747875,0.50127554
+18,Female,High School,Liechtenstein,5.8,Instagram,Yes,5.2,5,Single,1,High,0,1,55,1,1,2,-2.191995835524491,1.277287020506239,13.124187,-1.251497
+22,Male,Graduate,Montenegro,2.9,Facebook,No,7.0,7,In Relationship,0,Low,1,0,64,0,0,1,2.347408913339249,-1.0737625363634424,-3.860013,9.991646
+19,Female,Undergraduate,Albania,4.7,TikTok,Yes,5.8,6,Complicated,1,Medium-Low,0,2,1,6,1,0,-1.015150664269391,1.058521152038463,11.042913,1.2922244
+21,Male,Undergraduate,North Macedonia,3.7,Snapchat,No,6.5,7,Single,0,Medium-Low,1,2,70,5,0,2,1.1213143332288222,0.20929057595291498,-3.4037483,1.821697
+20,Female,High School,Kosovo,5.5,Instagram,Yes,5.4,5,In Relationship,1,Medium-High,0,1,50,1,1,1,-1.70256352374281,0.4243233518420051,10.8231535,1.9557042
+23,Male,Graduate,Bosnia,2.4,LinkedIn,No,7.4,8,Complicated,0,Low,1,0,15,4,0,0,3.3565510693644414,-1.7612712261819439,-3.008279,9.861945
+19,Female,Undergraduate,Qatar,4.9,TikTok,Yes,5.7,6,Single,1,Medium-Low,0,2,80,6,1,2,-1.6094517675106046,1.450894252426816,14.268836,-2.2289689
+18,Male,High School,Kuwait,5.7,Snapchat,Yes,5.3,5,In Relationship,1,Medium-High,1,1,51,5,1,1,-2.047667216946338,-0.13393842646532694,11.870263,0.41153297
+22,Female,Graduate,Bahrain,2.8,LinkedIn,No,7.1,8,Complicated,0,Low,0,0,9,4,0,0,2.775649390370654,-0.4206349224989959,-3.2411935,9.510449
+20,Male,Undergraduate,Oman,4.6,Instagram,Yes,5.9,6,Single,1,Medium-Low,1,2,72,1,1,2,-0.7856120339181925,0.37880423549458403,11.958613,-0.41300827
+21,Female,Undergraduate,Jordan,5.4,TikTok,Yes,5.5,5,In Relationship,1,Medium-High,0,2,47,6,1,1,-1.878016474161842,0.34103046304312173,11.512703,1.8453274
+19,Male,High School,Lebanon,5.8,YouTube,Yes,5.2,5,Complicated,1,High,1,1,54,11,1,0,-2.2940345454547035,-1.0363058756036083,11.287878,0.6486075
+23,Female,Graduate,Iraq,2.5,LinkedIn,No,7.3,8,Single,0,Low,0,0,41,4,0,2,2.872075746789309,-0.4280184870647177,-4.2719593,8.801885
+20,Male,Undergraduate,Yemen,4.7,Facebook,Yes,5.8,6,In Relationship,1,Medium-Low,1,2,109,0,1,1,-0.9930443518640115,0.36713975077252514,11.442427,0.056588605
+18,Female,High School,Syria,5.6,Instagram,Yes,5.4,5,Single,1,Medium-High,0,1,94,1,1,2,-2.2454122616324796,1.3943034973962538,12.940802,-1.345916
+22,Male,Graduate,Afghanistan,2.9,LinkedIn,No,7.0,7,Complicated,0,Low,1,0,0,4,0,0,2.5220162053186637,-1.5860873972420235,-3.0599494,9.797831
+19,Female,Undergraduate,Pakistan,4.8,TikTok,Yes,5.7,6,In Relationship,1,Medium-Low,0,2,73,6,1,1,-1.509396985981046,1.315080584333243,10.880823,1.8973693
+21,Male,Undergraduate,Nepal,3.8,YouTube,No,6.6,7,Single,0,Medium-Low,1,2,66,11,0,2,0.8503289231058132,-0.17617850809786775,-3.6643898,1.9415531
+20,Female,High School,Bhutan,5.5,Snapchat,Yes,5.5,5,Complicated,1,Medium-High,0,1,13,5,1,0,-1.633746823200385,-0.023056001713137486,10.887178,1.3350071
+23,Male,Graduate,Sri Lanka,2.6,LinkedIn,No,7.2,8,In Relationship,0,Low,1,0,91,4,0,1,2.761300133608427,-1.5157880227579419,-4.2669725,9.060745
+19,Female,Undergraduate,Maldives,4.9,Instagram,Yes,5.8,6,Single,1,Medium-Low,0,2,59,1,1,2,-1.2082620386896905,1.7349107737876244,13.599258,-1.0449567
+20,Male,Undergraduate,Bangladesh,6.1,Instagram,Yes,6.2,5,Single,1,Medium-High,1,2,10,1,1,2,-1.3404907404273199,0.06551892530734724,12.414681,-0.25909853
+21,Female,Undergraduate,India,5.8,TikTok,Yes,5.9,6,In Relationship,1,Medium-Low,0,2,39,6,1,1,-1.384249859542197,0.4208615036504391,11.590725,1.7822378
+19,Male,Undergraduate,Nepal,4.9,Facebook,No,7.1,7,Single,0,Low,1,2,66,0,0,2,0.9332427627639188,1.2349444083290941,-3.1211677,1.7382833
+22,Female,Graduate,Pakistan,5.5,Instagram,Yes,6.0,5,Single,1,Medium-High,0,0,73,1,1,2,-1.2181148064343361,-0.6949686577588119,12.033583,7.364681
+20,Male,Undergraduate,Sri Lanka,5.2,TikTok,Yes,6.3,6,In Relationship,1,Medium-Low,1,2,91,6,1,1,-1.1774642064180303,-0.03959250316366935,11.400555,0.13319829
+19,Female,Undergraduate,Maldives,4.8,Instagram,No,7.2,8,Single,0,Low,0,2,59,1,0,2,1.2246053464757276,2.3049120655795288,-4.134828,0.18501641
+21,Male,Graduate,Bangladesh,6.0,Facebook,Yes,5.8,5,In Relationship,1,Medium-High,1,0,10,0,1,1,-0.9806501662819015,-1.6131332686525055,13.45726,7.026752
+20,Female,Undergraduate,India,5.7,Instagram,Yes,6.1,6,Single,1,Medium-Low,0,2,39,1,1,2,-1.1624670167136912,1.276542575530467,13.719473,-0.86331564
+22,Male,Graduate,Nepal,4.7,TikTok,No,7.3,7,Single,0,Low,1,0,66,6,0,2,1.4505224524384865,-1.4437477281929272,-4.166874,7.5995235
+19,Female,Undergraduate,Pakistan,5.4,Instagram,Yes,6.2,5,In Relationship,1,Medium-High,0,2,73,1,1,1,-1.7283068154740489,1.5420922311123466,10.358267,2.2144032
+20,Male,Undergraduate,Sri Lanka,5.9,Facebook,Yes,5.9,6,Single,1,Medium-Low,1,2,91,0,1,2,-1.337843748969944,0.3672363184167946,11.836626,-0.5104287
+21,Female,Graduate,Maldives,4.6,Instagram,No,7.4,8,In Relationship,0,Low,0,0,59,1,0,1,1.940061733681757,0.2547215841224535,-3.7173429,9.352865
+19,Male,Undergraduate,Bangladesh,5.3,TikTok,Yes,6.3,5,Single,1,Medium-High,1,2,10,6,1,2,-1.359940892268318,0.20936266286069904,12.349016,0.12122624
+22,Female,Graduate,India,5.8,Instagram,Yes,5.8,6,In Relationship,1,Medium-Low,0,0,39,1,1,1,-0.766696001027648,-0.8519955049680453,11.55941,6.87329
+20,Male,Undergraduate,Nepal,4.5,Facebook,No,7.5,7,Single,0,Low,1,2,66,0,0,2,1.3711648977642539,0.9318003119036079,-3.1162732,1.7871517
+21,Female,Graduate,Pakistan,5.2,Instagram,Yes,6.4,5,In Relationship,1,Medium-High,0,0,73,1,1,1,-1.036540125608165,-0.37771265943651805,11.328275,6.9612746
+19,Male,Undergraduate,Sri Lanka,5.7,TikTok,Yes,5.7,6,Single,1,Medium-Low,1,2,91,6,1,2,-1.7592855942706518,0.3643382658569726,11.709599,-0.1773177
+20,Female,Undergraduate,Maldives,4.4,Instagram,No,7.6,8,In Relationship,0,Low,0,2,59,1,0,1,1.6862171788162073,1.871382378245832,-1.0940391,2.2307918
+22,Male,Graduate,Bangladesh,5.1,Facebook,Yes,6.5,5,Single,1,Medium-High,1,0,10,0,1,2,-0.2519730161760732,-1.7110412738886003,13.65742,7.0281467
+21,Female,Graduate,India,5.6,Instagram,Yes,5.6,6,In Relationship,1,Medium-Low,0,0,39,1,1,1,-0.8927937531195175,-0.47574945764150645,11.547411,6.7952356
+19,Male,Undergraduate,Nepal,4.3,TikTok,No,7.7,7,Single,0,Low,1,2,66,6,0,2,1.1134962325292996,0.9706988829346966,-3.6249814,1.6981263
+20,Female,Undergraduate,Pakistan,5.0,Instagram,Yes,6.6,5,In Relationship,1,Medium-High,0,2,73,1,1,1,-1.2903846804737142,1.2389481346868605,10.540142,2.3076189
+22,Male,Graduate,Sri Lanka,5.5,Facebook,Yes,5.5,6,Single,1,Medium-Low,1,0,91,0,1,2,-0.8150908982441608,-1.597862294483237,13.932806,8.764214
+21,Female,Graduate,Maldives,4.2,Instagram,No,7.8,8,In Relationship,0,Low,0,0,59,1,0,1,2.257126775664569,0.3313206337837623,-3.6713169,9.270786
+19,Male,Undergraduate,Bangladesh,4.9,TikTok,Yes,6.7,5,Single,1,Medium-High,1,2,10,6,1,2,-1.0428758502855056,0.2859617125220079,12.337496,0.18546408
+20,Female,Undergraduate,India,5.4,Instagram,Yes,5.4,6,In Relationship,1,Medium-Low,0,2,39,1,1,1,-1.3104114880508202,1.0991147128909615,11.340345,1.7817403
+22,Male,Graduate,Nepal,4.1,Facebook,No,7.9,7,Single,0,Low,1,0,66,0,0,2,2.2214641086215443,-0.9497050538146025,-5.7420173,8.815584
+21,Female,Graduate,Pakistan,4.8,Instagram,Yes,6.8,5,In Relationship,1,Medium-High,0,0,73,1,1,1,-0.7194750836253525,-0.30111360977520923,11.31889,7.0061164
+19,Male,Undergraduate,Sri Lanka,5.3,TikTok,Yes,5.3,6,Single,1,Medium-Low,1,2,91,6,1,2,-1.7697669124193465,0.35734406833646026,11.737365,-0.19337797
+20,Female,Undergraduate,Maldives,4.0,Instagram,No,8.0,8,In Relationship,0,Low,0,2,59,1,0,1,2.00328222079902,1.947981427907141,-0.93911594,2.3225498
+22,Male,Graduate,Bangladesh,4.7,Facebook,Yes,6.9,5,Single,1,Medium-High,1,0,10,0,1,2,0.0650920258067393,-1.6344422242272916,13.717367,6.9793973
+21,Female,Graduate,India,5.2,Instagram,Yes,5.2,6,In Relationship,1,Medium-Low,0,0,39,1,1,1,-0.903275071268212,-0.48274365516201884,11.525858,6.762209
+19,Male,Undergraduate,Nepal,3.9,TikTok,No,8.1,7,Single,0,Low,1,2,66,6,0,2,1.4305612745121117,1.0472979325960052,-3.633259,1.6950444
+20,Female,Undergraduate,Pakistan,4.6,Instagram,Yes,7.0,5,In Relationship,1,Medium-High,0,2,73,1,1,1,-0.9733196384909013,1.3155471843481694,10.50542,2.3816888
+22,Male,Graduate,Sri Lanka,5.1,Facebook,Yes,5.1,6,Single,1,Medium-Low,1,0,91,0,1,2,-0.8255722163928554,-1.6048564920037494,13.925414,8.740436
+21,Female,Graduate,Maldives,3.8,Instagram,No,8.2,8,In Relationship,0,Low,0,0,59,1,0,1,2.5741918176473817,0.4079196834450712,-3.6806622,9.307693
+19,Male,Undergraduate,Bangladesh,4.5,TikTok,Yes,7.1,5,Single,1,Medium-High,1,2,10,6,1,2,-0.7258108083026931,0.36256076218331673,12.358204,0.15218054
+20,Female,Undergraduate,India,5.0,Instagram,Yes,5.0,6,In Relationship,1,Medium-Low,0,2,39,1,1,1,-1.3208928061995147,1.0921205153704492,11.310009,1.7668941
+22,Male,Graduate,Nepal,3.7,Facebook,No,8.3,7,Single,0,Low,1,0,66,0,0,2,2.5385291506043566,-0.8731060041532938,-5.8015842,8.784212
+21,Female,Graduate,Pakistan,4.4,Instagram,Yes,7.2,5,In Relationship,1,Medium-High,0,0,73,1,1,1,-0.4024100416425401,-0.22451456011390034,11.247514,6.928375
+19,Male,Undergraduate,Sri Lanka,4.9,TikTok,Yes,4.9,6,Single,1,Medium-Low,1,2,91,6,1,2,-1.780248230568041,0.3503498708159479,11.800513,-0.18564619
+20,Female,Undergraduate,Maldives,3.6,Instagram,No,8.4,8,In Relationship,0,Low,0,2,59,1,0,1,2.3203472627818327,2.02458047756845,-0.8118617,2.2909334
+22,Male,Graduate,Bangladesh,4.3,Facebook,Yes,7.3,5,Single,1,Medium-High,1,0,10,0,1,2,0.38215706778955166,-1.5578431745659826,13.814362,6.9158297
+21,Female,Graduate,India,4.8,Instagram,Yes,4.8,6,In Relationship,1,Medium-Low,0,0,39,1,1,1,-0.9137563894169066,-0.4897378526825312,11.579955,6.7207603
+19,Male,Undergraduate,Nepal,3.5,TikTok,No,8.5,7,Single,0,Low,1,2,66,6,0,2,1.7476263164949244,1.1238969822573142,-3.6226172,1.6474837
+20,Female,Undergraduate,Pakistan,4.2,Instagram,Yes,7.4,5,In Relationship,1,Medium-High,0,2,73,1,1,1,-0.6562545965080889,1.3921462340094783,10.575325,2.343839
+22,Male,Graduate,Sri Lanka,4.7,Facebook,Yes,4.7,6,Single,1,Medium-Low,1,0,91,0,1,2,-0.8360535345415498,-1.611850689524262,13.920221,8.74236
+21,Female,Graduate,Maldives,3.4,Instagram,No,8.6,8,In Relationship,0,Low,0,0,59,1,0,1,2.8912568596301944,0.48451873310638005,-3.7020488,9.346379
+19,Male,Undergraduate,Bangladesh,4.1,TikTok,Yes,7.5,5,Single,1,Medium-High,1,2,10,6,1,2,-0.40874576631988024,0.4391598118446257,12.430965,0.19087222
+20,Female,Undergraduate,India,4.6,Instagram,Yes,4.6,6,In Relationship,1,Medium-Low,0,2,39,1,1,1,-1.3313741243482091,1.0851263178499369,11.246807,1.7412785
+19,Female,Undergraduate,Bangladesh,5.3,Instagram,Yes,6.1,5,Single,1,Medium-Low,0,2,10,1,1,2,-1.4122377739600371,1.5435711193137698,13.572675,-0.6183403
+21,Male,Graduate,India,4.8,Facebook,No,7.2,7,In Relationship,0,Medium-Low,1,0,39,0,0,1,1.716166775927673,-0.8888921869690196,-3.76485,10.637889
+20,Female,Undergraduate,Nepal,5.5,TikTok,Yes,5.9,6,Single,1,Medium-High,0,2,66,6,1,2,-1.560561639915498,1.0115884116239544,14.322606,-2.035939
+22,Male,Graduate,Pakistan,4.7,Instagram,Yes,6.3,5,In Relationship,1,Medium-Low,1,0,73,1,1,1,-0.5484811308778832,-1.763555280509602,10.794547,6.8725567
+19,Female,Undergraduate,Sri Lanka,5.1,Facebook,No,7.0,7,Single,0,Low,0,2,91,0,0,2,0.46325845777697744,2.296706975726162,-3.8970857,-0.4519826
+21,Male,Graduate,Maldives,5.4,TikTok,Yes,6.0,6,In Relationship,1,Medium-High,1,0,59,6,1,1,-0.7906561181796721,-1.7312907215411744,8.654998,9.374263
+20,Female,Undergraduate,Bangladesh,4.9,Instagram,Yes,6.4,5,Single,1,Medium-Low,0,2,10,1,1,2,-1.0152589339761406,1.229977866990556,13.671254,-0.4689647
+22,Male,Graduate,India,5.2,Facebook,No,7.1,7,In Relationship,0,Medium-Low,1,0,39,0,0,1,1.6427887120116973,-1.3138869150239407,-3.8031228,10.536897
+19,Female,Undergraduate,Nepal,5.6,TikTok,Yes,5.8,6,Single,1,Medium-High,0,2,66,6,1,2,-1.7606849934287236,1.3721817952954223,14.2120495,-1.992046
+21,Male,Graduate,Pakistan,4.6,Instagram,Yes,6.5,5,In Relationship,1,Medium-Low,1,0,73,1,1,1,-0.5491286683832637,-1.354213216109752,10.808157,6.843086
+20,Female,Undergraduate,Sri Lanka,5.0,Facebook,No,7.3,7,Single,0,Low,0,2,91,0,0,2,0.7452684013230795,1.9570119038501497,-3.886814,-0.4771776
+22,Male,Graduate,Maldives,5.3,TikTok,Yes,5.7,6,In Relationship,1,Medium-High,1,0,59,6,1,1,-0.7543059447322,-2.1336807288035526,8.6883135,9.33968
+19,Female,Undergraduate,Bangladesh,4.8,Instagram,Yes,6.6,5,Single,1,Medium-Low,0,2,10,1,1,2,-1.0159064714815214,1.6393199313904059,13.629009,-0.4277943
+21,Male,Graduate,India,5.1,Facebook,No,7.4,7,In Relationship,0,Medium-Low,1,0,39,0,0,1,1.6830844695227554,-0.894095694726363,-3.8144803,10.772728
+20,Female,Undergraduate,Nepal,5.7,TikTok,Yes,5.6,6,Single,1,Medium-High,0,2,66,6,1,2,-1.760037455923343,0.9628397308955722,14.33297,-2.011477
+22,Male,Graduate,Pakistan,4.5,Instagram,Yes,6.7,5,In Relationship,1,Medium-Low,1,0,73,1,1,1,-0.30806201985360004,-1.704357443883492,10.853977,6.8581233
+19,Female,Undergraduate,Sri Lanka,4.9,Facebook,No,7.5,7,Single,0,Low,0,2,91,0,0,2,0.7446208638176987,2.3663539682499994,-3.8836067,-0.49836704
+21,Male,Graduate,Maldives,5.2,TikTok,Yes,5.5,6,In Relationship,1,Medium-High,1,0,59,6,1,1,-0.9187266623033344,-1.7661352879946133,8.678474,9.345288
+20,Female,Undergraduate,Bangladesh,4.7,Instagram,Yes,6.8,5,Single,1,Medium-Low,0,2,10,1,1,2,-0.7748398229518576,1.2891757036166656,13.62544,-0.3346694
+22,Male,Graduate,India,5.0,Facebook,No,7.6,7,In Relationship,0,Medium-Low,1,0,39,0,0,1,1.924151118052419,-1.2442399225001035,-3.8149917,10.572635
+19,Female,Undergraduate,Nepal,5.8,TikTok,Yes,5.4,6,Single,1,Medium-High,0,2,66,6,1,2,-2.001104104453006,1.3129839586693126,14.364656,-1.953529
+21,Male,Graduate,Pakistan,4.4,Instagram,Yes,6.9,5,In Relationship,1,Medium-Low,1,0,73,1,1,1,-0.3087095573589808,-1.2950153794836423,10.785564,6.8121214
+20,Female,Undergraduate,Sri Lanka,4.8,Facebook,No,7.7,7,Single,0,Low,0,2,91,0,0,2,0.9856875123473626,2.0162097404762593,-3.9151866,-0.47202682
+22,Male,Graduate,Maldives,5.1,TikTok,Yes,5.3,6,In Relationship,1,Medium-High,1,0,59,6,1,1,-0.841433193839424,-2.158076139359264,8.727293,9.300061
+19,Female,Undergraduate,Bangladesh,4.6,Instagram,Yes,7.0,5,Single,1,Medium-Low,0,2,10,1,1,2,-0.7754873604572381,1.6985177680165156,13.679284,-0.39786658
+21,Male,Graduate,India,4.9,Facebook,No,7.8,7,In Relationship,0,Medium-Low,1,0,39,0,0,1,1.923503580547038,-0.8348978581002534,-3.7558472,10.6889925
+20,Female,Undergraduate,Nepal,5.9,TikTok,Yes,5.2,6,Single,1,Medium-High,0,2,66,6,1,2,-2.000456566947626,0.9036418942694626,14.449003,-1.9867098
+22,Male,Graduate,Pakistan,4.3,Instagram,Yes,7.1,5,In Relationship,1,Medium-Low,1,0,73,1,1,1,-0.06764290882931716,-1.6451596072573824,10.753192,6.765826
+19,Female,Undergraduate,Sri Lanka,4.7,Facebook,No,7.9,7,Single,0,Low,0,2,91,0,0,2,0.9850399748419818,2.4255518048761093,-3.8481598,-0.52494127
+21,Male,Graduate,Maldives,5.0,TikTok,Yes,5.1,6,In Relationship,1,Medium-High,1,0,59,6,1,1,-1.0058539114105585,-1.7905306985503249,8.709774,9.313218
+20,Female,Undergraduate,Bangladesh,4.5,Instagram,Yes,7.2,5,Single,1,Medium-Low,0,2,10,1,1,2,-0.5344207119275743,1.3483735402427754,13.6007595,-0.28188404
+22,Male,Graduate,India,4.8,Facebook,No,8.0,7,In Relationship,0,Medium-Low,1,0,39,0,0,1,2.1645702290767024,-1.1850420858739936,-3.7389681,10.610266
+19,Female,Undergraduate,Nepal,6.0,TikTok,Yes,5.0,6,Single,1,Medium-High,0,2,66,6,1,2,-2.2415232154772897,1.2537861220432027,14.46436,-1.9399726
+21,Male,Graduate,Pakistan,4.2,Instagram,Yes,7.3,5,In Relationship,1,Medium-Low,1,0,73,1,1,1,-0.06829044633469798,-1.2358175428575324,10.773985,6.806154
+20,Female,Undergraduate,Sri Lanka,4.6,Facebook,No,8.1,7,Single,0,Low,0,2,91,0,0,2,1.2261066233716456,2.075407577102369,-3.9457777,-0.5315219
+22,Male,Graduate,Maldives,4.9,TikTok,Yes,4.9,6,In Relationship,1,Medium-High,1,0,59,6,1,1,-0.9285604429466482,-2.182471549914976,8.746135,9.275349
+19,Female,Undergraduate,Bangladesh,4.4,Instagram,Yes,7.4,5,Single,1,Medium-Low,0,2,10,1,1,2,-0.5350682494329553,1.7577156046426252,13.612714,-0.28453258
+21,Male,Graduate,India,4.7,Facebook,No,8.2,7,In Relationship,0,Medium-Low,1,0,39,0,0,1,2.163922691571321,-0.7757000214741436,-3.6910455,10.748363
+20,Female,Undergraduate,Nepal,6.1,TikTok,Yes,4.8,6,Single,1,Medium-High,0,2,66,6,1,2,-2.240875677971909,0.8444440576433528,14.515309,-2.051662
+22,Male,Graduate,Pakistan,4.1,Instagram,Yes,7.5,5,In Relationship,1,Medium-Low,1,0,73,1,1,1,0.17277620219496612,-1.5859617706312725,10.7354145,6.7063484
+19,Female,Undergraduate,Sri Lanka,4.5,Facebook,No,8.3,7,Single,0,Low,0,2,91,0,0,2,1.225459085866265,2.4847496415022188,-3.8978205,-0.57464355
+21,Male,Graduate,Maldives,4.8,TikTok,Yes,4.7,6,In Relationship,1,Medium-High,1,0,59,6,1,1,-1.0929811605177824,-1.8149261091060362,8.773374,9.246488
+20,Female,Undergraduate,Bangladesh,4.3,Instagram,Yes,7.6,5,Single,1,Medium-Low,0,2,10,1,1,2,-0.2940016009032916,1.4075713768688851,13.576973,-0.22772846
+22,Male,Graduate,India,4.6,Facebook,No,8.4,7,In Relationship,0,Medium-Low,1,0,39,0,0,1,2.404989340100985,-1.125844249247884,-3.6790743,10.723677
+19,Female,Undergraduate,Nepal,6.2,TikTok,Yes,4.6,6,Single,1,Medium-High,0,2,66,6,1,2,-2.4819423265015725,1.194588285417093,14.538384,-2.0600896
+21,Male,Graduate,Pakistan,4.0,Instagram,Yes,7.7,5,In Relationship,1,Medium-Low,1,0,73,1,1,1,0.1721286646895853,-1.1766197062314228,10.678992,6.6855855
+20,Female,Undergraduate,Sri Lanka,4.4,Facebook,No,8.5,7,Single,0,Low,0,2,91,0,0,2,1.4665257343959284,2.1346054137284787,-3.932628,-0.5610186
+22,Male,Graduate,Maldives,4.7,TikTok,Yes,4.5,6,In Relationship,1,Medium-High,1,0,59,6,1,1,-1.0156876920538722,-2.206866960470687,8.793945,9.226383
+19,Female,Undergraduate,Bangladesh,4.2,Instagram,Yes,7.8,5,Single,1,Medium-Low,0,2,10,1,1,2,-0.2946491384086724,1.816913441268735,13.650601,-0.3077731
+21,Male,Graduate,India,4.5,Facebook,No,8.6,7,In Relationship,0,Medium-Low,1,0,39,0,0,1,2.4043418025956043,-0.7165021848480339,-3.6911554,10.761188
+20,Female,Undergraduate,Nepal,6.3,TikTok,Yes,4.4,6,Single,1,Medium-High,0,2,66,6,1,2,-2.4812947889961916,0.7852462210172431,14.527431,-2.0608194
+22,Male,Graduate,Pakistan,3.9,Instagram,Yes,7.9,5,In Relationship,1,Medium-Low,1,0,73,1,1,1,0.413195313219249,-1.5267639340051629,10.690406,6.7299685
+19,Female,Undergraduate,Sri Lanka,4.3,Facebook,No,8.7,7,Single,0,Low,0,2,91,0,0,2,1.4658781968905474,2.5439474781283287,-4.0039883,-0.64318657
+21,Male,Graduate,Maldives,4.6,TikTok,Yes,4.3,6,In Relationship,1,Medium-High,1,0,59,6,1,1,-1.1801084096250065,-1.8393215196617478,8.7653055,9.254931
+20,Female,Undergraduate,Bangladesh,4.1,Instagram,Yes,8.0,5,Single,1,Medium-Low,0,2,10,1,1,2,-0.05358248987900831,1.466769213494995,13.640183,-0.2327843
+22,Male,Graduate,India,4.4,Facebook,No,8.8,7,In Relationship,0,Medium-Low,1,0,39,0,0,1,2.6454084511252685,-1.066646412621774,-3.572552,10.796863
+19,Female,Undergraduate,Nepal,6.4,TikTok,Yes,4.2,6,Single,1,Medium-High,0,2,66,6,1,2,-2.722361437525856,1.1353904487909832,14.503946,-2.1209123
+21,Male,Graduate,Pakistan,3.8,Instagram,Yes,8.1,5,In Relationship,1,Medium-Low,1,0,73,1,1,1,0.4125477757138682,-1.1174218696053129,10.709398,6.7116003
+20,Female,Undergraduate,Sri Lanka,4.2,Facebook,No,8.9,7,Single,0,Low,0,2,91,0,0,2,1.7069448454202114,2.1938032503545886,-4.066528,-0.6586015
+22,Male,Graduate,Maldives,4.5,TikTok,Yes,4.1,6,In Relationship,1,Medium-High,1,0,59,6,1,1,-1.1028149411610964,-2.2312623710263986,8.756989,9.262346
+19,Female,Undergraduate,USA,6.5,Instagram,Yes,6.0,5,Single,1,High,0,2,102,1,1,2,-2.4130387863467386,1.6144059567294926,12.7782,-1.6150749
+21,Male,Graduate,UK,5.8,TikTok,Yes,6.5,6,In Relationship,1,Medium-Low,1,0,101,6,1,1,-0.9674842172754262,-1.629075265905161,10.847072,7.9024973
+20,Female,Undergraduate,Australia,4.5,Instagram,No,7.5,8,Single,0,Low,0,2,5,1,0,2,1.8767289938872143,1.8736255038872933,-1.9766991,0.9062046
+22,Male,Graduate,Germany,4.2,Facebook,No,7.8,7,In Relationship,0,Low,1,0,33,0,0,1,2.3452289622423974,-1.1658470588806762,-3.6600873,10.550256
+19,Female,Undergraduate,Japan,3.8,LINE,No,7.9,8,Single,0,Low,0,2,46,3,0,2,1.8666396843469628,2.3124418713910444,-4.284532,0.4536452
+21,Male,Graduate,Italy,5.5,Instagram,Yes,6.8,6,Single,1,Medium-Low,1,0,44,1,1,2,-0.19748351738608327,-1.2403348241888363,13.6079035,7.117696
+20,Female,Undergraduate,South Korea,5.2,KakaoTalk,Yes,6.5,6,In Relationship,1,Medium-Low,0,2,89,2,1,1,-1.1043427468044742,1.269185126793644,10.66009,2.3518715
+22,Male,Graduate,Russia,4.8,VKontakte,No,7.2,7,Single,0,Low,1,0,82,8,0,2,1.185854746678547,-1.556984723058842,-4.165177,7.564401
+19,Female,Undergraduate,USA,7.0,TikTok,Yes,5.8,4,In Relationship,1,High,0,2,102,6,1,1,-3.348779173483464,1.014681694689957,9.684629,1.038122
+21,Male,Graduate,UK,5.5,Instagram,Yes,6.7,6,Single,1,Medium-Low,1,0,101,1,1,2,-0.5481983504708685,-1.135736127076729,13.9840355,8.927137
+20,Female,Undergraduate,Australia,4.7,Facebook,No,7.4,7,In Relationship,0,Low,0,2,5,0,0,1,1.3922448914135601,1.6895963171846449,-1.2538868,1.558457
+22,Male,Graduate,Germany,4.0,Instagram,No,7.9,8,Single,0,Low,1,0,33,1,0,2,2.829713064716052,-0.9818178721780279,-5.1545434,8.620533
+19,Female,Undergraduate,Japan,3.5,LINE,No,8.0,8,Single,0,Low,0,2,46,3,0,2,2.022551875801195,2.3489928468415706,-4.3875833,0.43472716
+21,Male,Graduate,Italy,5.7,TikTok,Yes,6.5,5,In Relationship,1,Medium-High,1,0,44,6,1,1,-1.0591983031014527,-1.8244064225733008,8.257856,9.729565
+20,Female,Undergraduate,South Korea,5.0,KakaoTalk,Yes,6.8,6,Single,1,Medium-Low,0,2,89,2,1,2,-0.9285566281367749,1.4483193984302363,14.393097,-4.014939
+22,Male,Graduate,Russia,4.5,VKontakte,No,7.4,7,In Relationship,0,Low,1,0,82,8,0,1,1.4063999304893635,-1.6403701826187984,-3.9271657,7.6894684
+19,Female,Undergraduate,USA,6.8,Instagram,Yes,5.9,4,Single,1,High,0,2,102,1,1,2,-3.0087595671746095,1.488871071103062,12.70045,-1.573076
+21,Male,Graduate,UK,5.6,Facebook,Yes,6.6,6,In Relationship,1,Medium-Low,1,0,101,0,1,1,-0.5545508980916198,-1.2220807970858736,10.641083,7.126582
+20,Female,Undergraduate,Australia,4.6,Instagram,No,7.3,7,Single,0,Low,0,2,5,1,0,2,1.3167108490014348,1.755042675398334,-1.9672748,0.92052376
+22,Male,Graduate,Germany,4.1,Facebook,No,7.7,8,In Relationship,0,Low,1,0,33,0,0,1,2.7824172220788626,-1.0786116980848997,-3.1001365,10.396396
+19,Female,Undergraduate,Japan,3.7,LINE,No,7.8,8,Single,0,Low,0,2,46,3,0,2,1.8640193548097888,2.3106933220109163,-4.313584,0.51130325
+21,Male,Graduate,Italy,5.4,Instagram,Yes,6.7,5,Single,1,Medium-Low,1,0,44,1,1,2,-0.639912436296895,-1.331067283744869,13.576527,7.2113304
+20,Female,Undergraduate,South Korea,5.1,KakaoTalk,Yes,6.6,6,In Relationship,1,Medium-Low,0,2,89,2,1,1,-1.025076486308771,1.2883348892089712,10.685478,2.3438373
+22,Male,Graduate,Russia,4.7,VKontakte,No,7.3,7,Single,0,Low,1,0,82,8,0,2,1.2651210071742498,-1.5378349606435149,-4.14209,7.5730963
+19,Female,Undergraduate,USA,6.9,TikTok,Yes,5.7,4,In Relationship,1,High,0,2,102,6,1,1,-3.351399503020638,1.0129331453098291,9.634496,1.0930703
+21,Male,Graduate,UK,5.7,Instagram,Yes,6.4,6,Single,1,Medium-Low,1,0,101,1,1,2,-0.7476741664787132,-1.1844848078051113,14.01361,8.888934
+20,Female,Undergraduate,Australia,4.8,Facebook,No,7.2,7,In Relationship,0,Low,0,2,5,0,0,1,1.2720353359014187,1.6599973988715901,-1.2585447,1.590957
+22,Male,Graduate,Germany,3.9,Instagram,No,7.8,8,Single,0,Low,1,0,33,1,0,2,2.827092735178878,-0.983566421558156,-5.1125245,8.592891
+19,Female,Undergraduate,Japan,3.6,LINE,No,8.1,8,Single,0,Low,0,2,46,3,0,2,2.0251722053383685,2.3507413962216988,-4.3286314,0.50796163
+21,Male,Graduate,Italy,5.6,TikTok,Yes,6.6,5,In Relationship,1,Medium-High,1,0,44,6,1,1,-0.9799320426057495,-1.8052566601579736,8.281076,9.716713
+20,Female,Undergraduate,South Korea,4.9,KakaoTalk,Yes,6.9,6,Single,1,Medium-Low,0,2,89,2,1,2,-0.8492903676410716,1.4674691608455637,14.53081,-4.169249
+22,Male,Graduate,Russia,4.6,VKontakte,No,7.5,7,In Relationship,0,Low,1,0,82,8,0,1,1.4090202600265371,-1.6386216332386703,-3.9234955,7.686778
+19,Female,Undergraduate,USA,6.7,Instagram,Yes,5.8,4,Single,1,High,0,2,102,1,1,2,-3.0113798967117833,1.4871225217229336,12.685472,-1.5428354
+21,Male,Graduate,UK,5.4,Facebook,Yes,6.5,6,In Relationship,1,Medium-Low,1,0,101,0,1,1,-0.5188482621495288,-1.215128739948402,10.654744,7.106249
+20,Female,Undergraduate,Australia,4.4,Instagram,No,7.4,7,Single,0,Low,0,2,5,1,0,2,1.4343000749764026,1.7828930443312605,-1.9523615,0.92394406
+22,Male,Graduate,Germany,4.0,Facebook,No,7.6,8,In Relationship,0,Low,1,0,33,0,0,1,2.7797968925416883,-1.080360247465028,-3.0695736,10.400363
+19,Female,Undergraduate,Japan,3.4,LINE,No,8.2,8,Single,0,Low,0,2,46,3,0,2,2.1427614313133363,2.378591765154625,-4.4523706,0.5010935
+21,Male,Graduate,Italy,5.3,Instagram,Yes,6.8,5,Single,1,Medium-Low,1,0,44,1,1,2,-0.5606461758011918,-1.3119175213295418,13.534084,7.2017393
+20,Female,Undergraduate,South Korea,5.0,KakaoTalk,Yes,6.7,6,In Relationship,1,Medium-Low,0,2,89,2,1,1,-0.9458102258130676,1.3074846516242984,10.612687,2.4260886
+22,Male,Graduate,Russia,4.4,VKontakte,No,7.6,7,Single,0,Low,1,0,82,8,0,2,1.502919788661359,-1.4803856733975334,-4.1458054,7.59654
+19,Female,Undergraduate,USA,6.6,TikTok,Yes,5.6,4,In Relationship,1,High,0,2,102,6,1,1,-3.2773739015992818,1.0285858089649,9.664367,1.0932732
+21,Male,Graduate,UK,5.3,Instagram,Yes,6.3,6,Single,1,Medium-Low,1,0,101,1,1,2,-0.6353255995780928,-1.1601315376324406,14.030688,8.86311
+20,Female,Undergraduate,Australia,4.3,Facebook,No,7.5,7,In Relationship,0,Low,0,2,5,0,0,1,1.5864800483470576,1.734847899152771,-1.2673657,1.5035765
+22,Male,Graduate,Germany,3.8,Instagram,No,7.7,8,Single,0,Low,1,0,33,1,0,2,2.8244724056417048,-0.9853149709382839,-5.146962,8.642427
+19,Female,Undergraduate,Japan,3.3,LINE,No,8.3,8,Single,0,Low,0,2,46,3,0,2,2.22202769180904,2.397741527569953,-4.4365935,0.41916955
+21,Male,Graduate,Italy,5.2,TikTok,Yes,6.9,5,In Relationship,1,Medium-High,1,0,44,6,1,1,-0.7038102956393752,-1.7391067663943922,8.286049,9.708195
+20,Female,Undergraduate,South Korea,4.8,KakaoTalk,Yes,7.0,6,Single,1,Medium-Low,0,2,89,2,1,2,-0.7700241071453684,1.4866189232608908,14.464132,-4.1057215
+22,Male,Graduate,Russia,4.3,VKontakte,No,7.7,7,In Relationship,0,Low,1,0,82,8,0,1,1.605875746497208,-1.5916215018904163,-3.8563254,7.720835
+19,Female,Undergraduate,USA,6.4,Instagram,Yes,5.7,4,Single,1,High,0,2,102,1,1,2,-2.9373542952904272,1.5027751853780047,12.680307,-1.5666027
+21,Male,Graduate,UK,5.2,Facebook,Yes,6.4,6,In Relationship,1,Medium-Low,1,0,101,0,1,1,-0.4831456262074376,-1.2081766828109306,10.646538,7.171333
+20,Female,Undergraduate,Australia,4.5,Instagram,No,7.3,7,Single,0,Low,0,2,5,1,0,2,1.3550338144806993,1.7637432819159335,-1.9583223,0.9157996
+22,Male,Graduate,Germany,3.7,Facebook,No,7.8,8,In Relationship,0,Low,1,0,33,0,0,1,2.9766523790123594,-1.033360116116774,-2.975385,10.383988
+19,Female,Undergraduate,Japan,3.2,LINE,No,8.4,8,Single,0,Low,0,2,46,3,0,2,2.301293952304743,2.41689128998528,-4.462747,0.39277443
+21,Male,Graduate,Italy,5.4,Instagram,Yes,6.7,5,Single,1,Medium-Low,1,0,44,1,1,2,-0.639912436296895,-1.331067283744869,13.575477,7.2381716
+20,Female,Undergraduate,South Korea,4.7,KakaoTalk,Yes,7.1,6,In Relationship,1,Medium-Low,0,2,89,2,1,1,-0.6670681493095201,1.3753830947680077,10.6413965,2.3994918
+22,Male,Graduate,Russia,4.2,VKontakte,No,7.8,7,Single,0,Low,1,0,82,8,0,2,1.6614523096527656,-1.4420861485668788,-4.1788683,7.552728
+19,Female,Undergraduate,USA,6.6,TikTok,Yes,5.5,4,In Relationship,1,High,0,2,102,6,1,1,-3.31831719661572,1.0181366530671725,9.72787,1.0681102
+21,Male,Graduate,UK,5.1,Instagram,Yes,6.5,6,Single,1,Medium-Low,1,0,101,1,1,2,-0.47679307858668635,-1.121832012801786,14.021068,8.920025
+20,Female,Undergraduate,Australia,4.4,Facebook,No,7.4,7,In Relationship,0,Low,0,2,5,0,0,1,1.5072137878513543,1.7156981367374435,-1.2658732,1.5116049
+22,Male,Graduate,Germany,3.6,Instagram,No,7.9,8,Single,0,Low,1,0,33,1,0,2,2.983004926633111,-0.9470154461076296,-5.140307,8.635052
+19,Female,Undergraduate,Japan,3.1,LINE,No,8.5,8,Single,0,Low,0,2,46,3,0,2,2.380560212800446,2.436041052400607,-4.4866843,0.39481032
+21,Male,Graduate,Italy,5.3,TikTok,Yes,6.8,5,In Relationship,1,Medium-High,1,0,44,6,1,1,-0.7830765561350784,-1.7582565288097196,8.339418,9.656118
+20,Female,Undergraduate,South Korea,4.6,KakaoTalk,Yes,7.2,6,Single,1,Medium-Low,0,2,89,2,1,2,-0.611491586153962,1.5249184480915452,14.424477,-4.0211506
+22,Male,Graduate,Russia,4.1,VKontakte,No,7.9,7,In Relationship,0,Low,1,0,82,8,0,1,1.7644082674886146,-1.5533219770597617,-3.868738,7.730841
+19,Female,Undergraduate,USA,6.7,Instagram,Yes,5.4,4,Single,1,High,0,2,102,1,1,2,-3.1751530767775367,1.445325898132023,12.639244,-1.5116751
+21,Male,Graduate,UK,5.0,Facebook,Yes,6.6,6,In Relationship,1,Medium-Low,1,0,101,0,1,1,-0.3246131052160316,-1.1698771579802762,10.594417,7.048956
+20,Female,Undergraduate,Australia,4.3,Instagram,No,7.5,7,Single,0,Low,0,2,5,1,0,2,1.5135663354721056,1.802042806746588,-1.9645811,0.90223324
+22,Male,Graduate,Germany,3.5,Facebook,No,8.0,8,In Relationship,0,Low,1,0,33,0,0,1,3.135184900003766,-0.9950605912861193,-2.8947988,10.42085
+19,Female,Undergraduate,Japan,3.0,LINE,No,8.6,8,Single,0,Low,0,2,46,3,0,2,2.459826473296149,2.4551908148159347,-4.5320754,0.3271819
+21,Male,Graduate,Italy,5.2,Instagram,Yes,6.9,5,Single,1,Medium-Low,1,0,44,1,1,2,-0.4813799153054886,-1.2927677589142144,13.56339,7.1832857
+20,Female,Undergraduate,South Korea,4.5,KakaoTalk,Yes,7.3,6,In Relationship,1,Medium-Low,0,2,89,2,1,1,-0.5085356283181137,1.4136826195986623,10.563058,2.355631
+22,Male,Graduate,Russia,4.0,VKontakte,No,8.0,7,Single,0,Low,1,0,82,8,0,2,1.819984830644172,-1.4037866237362244,-4.1598606,7.5677395
+19,Female,Undergraduate,USA,6.8,TikTok,Yes,5.3,4,In Relationship,1,High,0,2,102,6,1,1,-3.4768497176071267,0.9798371282365184,9.637941,1.1060064
+21,Male,Graduate,UK,4.9,Instagram,Yes,6.7,6,Single,1,Medium-Low,1,0,101,1,1,2,-0.31826055759528027,-1.0835324879711317,13.98689,8.889059
+20,Female,Undergraduate,Australia,4.2,Facebook,No,7.6,7,In Relationship,0,Low,0,2,5,0,0,1,1.6657463088427602,1.753997661568098,-1.2872384,1.5055453
+22,Male,Graduate,Germany,3.4,Instagram,No,8.1,8,Single,0,Low,1,0,33,1,0,2,3.141537447624517,-0.908715921276975,-5.144035,8.636508
+19,Female,Undergraduate,Japan,2.9,LINE,No,8.7,8,Single,0,Low,0,2,46,3,0,2,2.539092733791852,2.4743405772312617,-4.5885096,0.30561644
+21,Male,Graduate,Italy,5.1,TikTok,Yes,7.0,5,In Relationship,1,Medium-High,1,0,44,6,1,1,-0.6245440351436721,-1.719957003979065,8.290778,9.703628
+20,Female,Undergraduate,South Korea,4.4,KakaoTalk,Yes,7.4,6,Single,1,Medium-Low,0,2,89,2,1,2,-0.452959065162556,1.5632179729221996,14.41067,-4.030859
+22,Male,Graduate,Russia,3.9,VKontakte,No,8.1,7,In Relationship,0,Low,1,0,82,8,0,1,1.9229407884800203,-1.5150224522291074,-3.8665946,7.7254767
+19,Female,Undergraduate,USA,6.9,Instagram,Yes,5.2,4,Single,1,High,0,2,102,1,1,2,-3.333685597768943,1.4070263733013686,12.643075,-1.5800875
+21,Male,Graduate,UK,4.8,Facebook,Yes,6.8,6,In Relationship,1,Medium-Low,1,0,101,0,1,1,-0.16608058422462518,-1.1315776331496217,10.623569,7.095146
+20,Female,Undergraduate,Australia,4.1,Instagram,No,7.7,7,Single,0,Low,0,2,5,1,0,2,1.672098856463512,1.8403423315772425,-1.9692072,0.90081173
+22,Male,Graduate,Germany,3.3,Facebook,No,8.2,8,In Relationship,0,Low,1,0,33,0,0,1,3.2937174209951716,-0.956761066455465,-2.8151112,10.464624
+19,Female,Undergraduate,Japan,2.8,LINE,No,8.8,8,Single,0,Low,0,2,46,3,0,2,2.6183589942875556,2.4934903396465886,-4.570692,0.29306063
+21,Male,Graduate,Italy,5.0,Instagram,Yes,7.1,5,Single,1,Medium-Low,1,0,44,1,1,2,-0.32284739431408255,-1.25446823408356,13.596433,7.1574397
+20,Female,Undergraduate,South Korea,4.3,KakaoTalk,Yes,7.5,6,In Relationship,1,Medium-Low,0,2,89,2,1,1,-0.35000310732670736,1.4519821444293166,10.603757,2.392849
+22,Male,Graduate,Russia,3.8,VKontakte,No,8.2,7,Single,0,Low,1,0,82,8,0,2,1.978517351635578,-1.3654870989055699,-4.1167674,7.5473804
+19,Female,Undergraduate,USA,7.0,TikTok,Yes,5.1,4,In Relationship,1,High,0,2,102,6,1,1,-3.635382238598533,0.9415376034058638,9.645168,1.0607479
+21,Male,Graduate,UK,4.7,Instagram,Yes,6.9,6,Single,1,Medium-Low,1,0,101,1,1,2,-0.15972803660387386,-1.0452329631404773,13.966009,8.99813
+20,Female,Undergraduate,Australia,4.0,Facebook,No,7.8,7,In Relationship,0,Low,0,2,5,0,0,1,1.8242788298341668,1.7922971863987525,-1.2417359,1.5155277
+22,Male,Graduate,Germany,3.2,Instagram,No,8.3,8,Single,0,Low,1,0,33,1,0,2,3.3000699686159236,-0.8704163964463206,-5.1277523,8.680788
+19,Female,Undergraduate,Japan,2.7,LINE,No,8.9,8,Single,0,Low,0,2,46,3,0,2,2.6976252547832584,2.512640102061916,-4.5559063,0.2718505
+21,Male,Graduate,Italy,4.9,TikTok,Yes,7.2,5,In Relationship,1,Medium-High,1,0,44,6,1,1,-0.46601151415226605,-1.6816574791484107,8.3089695,9.681603
+20,Female,Undergraduate,South Korea,4.2,KakaoTalk,Yes,7.6,6,Single,1,Medium-Low,0,2,89,2,1,2,-0.29442654417115005,1.6015174977528541,14.517055,-4.141318
+22,Male,Graduate,Russia,3.7,VKontakte,No,8.3,7,In Relationship,0,Low,1,0,82,8,0,1,2.081473309471427,-1.476722927398453,-3.8497725,7.734959
+19,Female,Undergraduate,USA,7.1,Instagram,Yes,5.0,4,Single,1,High,0,2,102,1,1,2,-3.4922181187603494,1.3687268484707142,12.657393,-1.5515133
+21,Male,Graduate,UK,4.6,Facebook,Yes,7.0,6,In Relationship,1,Medium-Low,1,0,101,0,1,1,-0.00754806323321877,-1.0932781083189673,10.629285,7.0729475
+20,Female,Undergraduate,Australia,3.9,Instagram,No,7.9,7,Single,0,Low,0,2,5,1,0,2,1.8306313774549183,1.8786418564078968,-1.9582678,0.90979415
+22,Male,Graduate,Germany,3.1,Facebook,No,8.4,8,In Relationship,0,Low,1,0,33,0,0,1,3.452249941986578,-0.9184615416248104,-2.6572568,10.579238
+19,Female,Undergraduate,Spain,5.2,Instagram,Yes,6.8,6,Single,1,Medium-Low,0,2,90,1,1,2,-1.0822702249651843,1.8758703981823632,14.476383,-4.1375475
+21,Male,Graduate,Denmark,4.1,Facebook,No,7.8,8,In Relationship,0,Low,1,0,26,0,0,1,2.740545542787926,-0.7025480798033391,-2.9211876,10.454939
+20,Female,Undergraduate,Ireland,5.0,Instagram,Yes,7.0,7,Single,1,Medium-Low,0,2,42,1,1,2,-0.1022117789987463,1.5265282845675294,14.815943,-0.32939792
+22,Male,Graduate,India,5.8,WhatsApp,Yes,6.5,5,In Relationship,1,Medium-High,1,0,39,10,1,1,-1.1463872957666008,-2.4757048253659564,7.8041606,10.150655
+19,Female,Undergraduate,Switzerland,4.0,Instagram,No,7.9,8,Single,0,Low,0,2,93,1,0,2,1.6330161302613388,2.5162860441330923,-4.2846055,-0.7796704
+21,Male,Graduate,Turkey,5.5,Instagram,Yes,6.7,6,Single,1,Medium-Low,1,0,99,1,1,2,-0.5373291736965405,-1.139772893849004,14.014822,8.91722
+20,Female,Undergraduate,USA,6.8,TikTok,Yes,5.5,5,In Relationship,1,High,0,2,102,6,1,1,-2.83429744518309,0.7099762041210825,9.605813,1.195516
+22,Male,Graduate,Mexico,5.6,WhatsApp,Yes,6.6,6,Single,1,Medium-Low,1,0,61,10,1,2,-0.7322401222757481,-2.1840805208538905,12.115098,12.036189
+19,Female,Undergraduate,France,4.5,Instagram,No,7.5,7,In Relationship,0,Low,0,2,31,1,0,1,1.1984537107699358,2.086477116929547,-1.0632405,2.013781
+21,Male,Graduate,Canada,5.3,Instagram,Yes,6.9,6,Single,1,Medium-Low,1,0,18,1,1,2,0.06140500665514839,-1.2649624232954833,13.808564,6.8151436
+20,Female,Undergraduate,Spain,5.1,TikTok,Yes,6.7,6,Single,1,Medium-Low,0,2,90,6,1,2,-1.2101535391588674,1.1784252861434727,14.456144,-2.7138643
+22,Male,Graduate,Denmark,3.9,Facebook,No,7.9,8,In Relationship,0,Low,1,0,26,0,0,1,2.9789918617804165,-1.0544408569572075,-3.000018,10.33636
+19,Female,Undergraduate,Ireland,4.8,Instagram,Yes,7.1,7,Single,1,Medium-Low,0,2,42,1,1,2,-0.10547964604130074,1.9341217995872515,14.912326,-0.32860562
+21,Male,Graduate,India,5.9,WhatsApp,Yes,6.4,5,In Relationship,1,Medium-High,1,0,39,10,1,1,-1.3465106492798262,-2.1151114416944883,7.768857,10.072781
+20,Female,Undergraduate,Switzerland,3.8,Instagram,No,8.0,8,Single,0,Low,0,2,93,1,0,2,1.871462449253829,2.164393266979224,-4.471467,-0.8942691
+22,Male,Graduate,Turkey,5.4,TikTok,Yes,6.8,6,Single,1,Medium-Low,1,0,99,6,1,2,-0.5833258978573476,-1.8163196940924398,12.195326,8.636918
+19,Female,Undergraduate,USA,6.9,Instagram,Yes,5.4,5,In Relationship,1,High,0,2,102,1,1,1,-2.7883007210222828,1.386523004364518,9.578078,2.105971
+21,Male,Graduate,Mexico,5.7,WhatsApp,Yes,6.5,6,Single,1,Medium-Low,1,0,61,10,1,2,-0.9323634757889734,-1.8234871371824233,12.216702,12.267941
+20,Female,Undergraduate,France,4.4,Instagram,No,7.6,7,In Relationship,0,Low,0,2,31,1,0,1,1.3985770642831608,1.7258837332580792,-1.2664472,1.930331
+22,Male,Graduate,Canada,5.2,TikTok,Yes,7.0,6,Single,1,Medium-Low,1,0,18,6,1,2,0.015408282494341383,-1.9415092235389186,12.967399,10.993894
+19,Female,Undergraduate,Spain,5.0,Instagram,Yes,6.9,6,Single,1,Medium-Low,0,2,90,1,1,2,-0.964680998990216,1.90372076711529,14.414989,-4.1215844
+21,Male,Graduate,Denmark,3.8,Facebook,No,8.0,8,In Relationship,0,Low,1,0,26,0,0,1,2.9374010292585973,-0.655547948455085,-2.8956466,10.439828
+20,Female,Undergraduate,Ireland,4.7,TikTok,Yes,7.2,7,Single,1,Medium-Low,0,2,42,6,1,2,-0.15147637020210736,1.257574999343816,15.307715,-0.5951039
+22,Male,Graduate,India,6.0,WhatsApp,Yes,6.3,5,In Relationship,1,Medium-High,1,0,39,10,1,1,-1.3049198167580074,-2.5140043501966107,7.7701054,10.173306
+19,Female,Undergraduate,Switzerland,3.7,Instagram,No,8.1,8,Single,0,Low,0,2,93,1,0,2,1.8298716167320095,2.563286175481346,-4.390082,-0.8309034
+21,Male,Graduate,Turkey,5.3,Instagram,Yes,6.9,6,Single,1,Medium-Low,1,0,99,1,1,2,-0.3787966527051343,-1.1014733690183496,14.008397,8.899572
+20,Female,Undergraduate,USA,7.0,TikTok,Yes,5.3,5,In Relationship,1,High,0,2,102,6,1,1,-2.992829966174496,0.6716766792904282,9.46432,1.1934844
+22,Male,Graduate,Mexico,5.8,WhatsApp,Yes,6.4,6,Single,1,Medium-Low,1,0,61,10,1,2,-0.890772643267154,-2.2223800456845453,12.053675,12.051179
+19,Female,Undergraduate,France,4.3,Instagram,No,7.7,7,In Relationship,0,Low,0,2,31,1,0,1,1.3569862317613421,2.124776641760201,-1.0145881,2.0674977
+21,Male,Graduate,Canada,5.1,Instagram,Yes,7.1,6,Single,1,Medium-Low,1,0,18,1,1,2,0.21993752764655441,-1.2266628984648287,13.856759,6.874042
+20,Female,Undergraduate,Spain,4.9,TikTok,Yes,7.0,6,Single,1,Medium-Low,0,2,90,6,1,2,-1.010677723151023,1.2271739668718546,14.470397,-2.8083234
+22,Male,Graduate,Denmark,3.7,Facebook,No,8.1,8,In Relationship,0,Low,1,0,26,0,0,1,3.137524382771822,-1.016141332126553,-2.8418748,10.387124
+19,Female,Undergraduate,Ireland,4.6,Instagram,Yes,7.3,7,Single,1,Medium-Low,0,2,42,1,1,2,0.053052874950105675,1.9724213244179059,14.91507,-0.33537683
+21,Male,Graduate,India,6.1,WhatsApp,Yes,6.2,5,In Relationship,1,Medium-High,1,0,39,10,1,1,-1.5050431702712324,-2.1534109665251426,7.728393,10.084097
+20,Female,Undergraduate,Switzerland,3.6,Instagram,No,8.2,8,Single,0,Low,0,2,93,1,0,2,2.0299949702452347,2.202692791809878,-4.460442,-0.90665513
+22,Male,Graduate,Turkey,5.2,TikTok,Yes,7.0,6,Single,1,Medium-Low,1,0,99,6,1,2,-0.4247933768659413,-1.7780201692617852,12.189692,8.738389
+19,Female,Undergraduate,USA,7.1,Instagram,Yes,5.2,5,In Relationship,1,High,0,2,102,1,1,1,-2.9468332420136885,1.3482234795338637,9.568451,2.1263986
+21,Male,Graduate,Mexico,5.9,WhatsApp,Yes,6.3,6,Single,1,Medium-Low,1,0,61,10,1,2,-1.09089599678038,-1.8617866620130776,12.1406975,12.266246
+20,Female,Undergraduate,France,4.2,Instagram,No,7.8,7,In Relationship,0,Low,0,2,31,1,0,1,1.5571095852745673,1.7641832580887338,-1.0422655,2.0553625
+22,Male,Graduate,Canada,5.0,TikTok,Yes,7.2,6,Single,1,Medium-Low,1,0,18,6,1,2,0.17394080348574778,-1.9032096987082643,12.9362545,11.028113
+19,Female,Undergraduate,Spain,4.8,Instagram,Yes,7.1,6,Single,1,Medium-Low,0,2,90,1,1,2,-0.80614847799881,1.9420202919459446,14.440747,-4.1026845
+21,Male,Graduate,Denmark,3.6,Facebook,No,8.2,8,In Relationship,0,Low,1,0,26,0,0,1,3.095933550250003,-0.6172484236244308,-2.76919,10.545314
+20,Female,Undergraduate,Ireland,4.5,TikTok,Yes,7.4,7,Single,1,Medium-Low,0,2,42,6,1,2,0.00705615078929904,1.2958745241744705,15.39202,-0.5167989
+22,Male,Graduate,India,6.2,WhatsApp,Yes,6.1,5,In Relationship,1,Medium-High,1,0,39,10,1,1,-1.4634523377494137,-2.5523038750272655,7.7027397,10.136733
+19,Female,Undergraduate,Switzerland,3.5,Instagram,No,8.3,8,Single,0,Low,0,2,93,1,0,2,1.9884041377234163,2.601585700312001,-4.43512,-0.8707992
+21,Male,Graduate,Turkey,5.1,Instagram,Yes,7.1,6,Single,1,Medium-Low,1,0,99,1,1,2,-0.22026413171372822,-1.063173844187695,13.9949045,9.041468
+20,Female,Undergraduate,USA,7.2,TikTok,Yes,5.1,5,In Relationship,1,High,0,2,102,6,1,1,-3.151362487165902,0.6333771544597737,9.4188795,1.1869035
+22,Male,Graduate,Mexico,6.0,WhatsApp,Yes,6.2,6,Single,1,Medium-Low,1,0,61,10,1,2,-1.0493051642585605,-2.2606795705151996,11.995946,12.076162
+19,Female,Undergraduate,France,4.1,Instagram,No,7.9,7,In Relationship,0,Low,0,2,31,1,0,1,1.5155187527527485,2.163076166590856,-0.91743505,2.0672667
+21,Male,Graduate,Canada,4.9,Instagram,Yes,7.3,6,Single,1,Medium-Low,1,0,18,1,1,2,0.37847004863796047,-1.1883633736341743,13.914593,6.8296566
+20,Female,Undergraduate,Spain,4.7,TikTok,Yes,7.2,6,Single,1,Medium-Low,0,2,90,6,1,2,-0.8521452021596166,1.265473491702509,14.494453,-2.937928
+22,Male,Graduate,Denmark,3.5,Facebook,No,8.3,8,In Relationship,0,Low,1,0,26,0,0,1,3.2960569037632292,-0.9778418072958984,-2.7406013,10.516646
+19,Female,Undergraduate,Ireland,4.4,Instagram,Yes,7.5,7,Single,1,Medium-Low,0,2,42,1,1,2,0.2115853959415118,2.01072084924856,14.949113,-0.28317767
+21,Male,Graduate,India,6.3,WhatsApp,Yes,6.0,5,In Relationship,1,Medium-High,1,0,39,10,1,1,-1.6635756912626387,-2.1917104913557974,7.6939535,10.030511
+20,Female,Undergraduate,Switzerland,3.4,Instagram,No,8.4,8,Single,0,Low,0,2,93,1,0,2,2.1885274912366413,2.2409923166405328,-4.54043,-0.94141465
+22,Male,Graduate,Turkey,5.0,TikTok,Yes,7.2,6,Single,1,Medium-Low,1,0,99,6,1,2,-0.2662608558745349,-1.7397206444311308,12.12952,8.776752
+19,Female,Undergraduate,USA,7.3,Instagram,Yes,5.0,5,In Relationship,1,High,0,2,102,1,1,1,-3.105365763005095,1.309923954703209,9.454099,2.0893593
+21,Male,Graduate,Mexico,6.1,WhatsApp,Yes,6.1,6,Single,1,Medium-Low,1,0,61,10,1,2,-1.2494285177717859,-1.900086186843732,12.063198,12.310094
+20,Female,Undergraduate,France,4.0,Instagram,No,8.0,7,In Relationship,0,Low,0,2,31,1,0,1,1.7156421062659737,1.8024827829193881,-0.91428775,2.0112305
+22,Male,Graduate,Canada,4.8,TikTok,Yes,7.4,6,Single,1,Medium-Low,1,0,18,6,1,2,0.33247332447715416,-1.8649101738776097,13.003973,10.9761
+19,Female,Undergraduate,Spain,4.6,Instagram,Yes,7.3,6,Single,1,Medium-Low,0,2,90,1,1,2,-0.6476159570074036,1.980319816776599,14.506449,-4.1735716
+21,Male,Graduate,Denmark,3.4,Facebook,No,8.4,8,In Relationship,0,Low,1,0,26,0,0,1,3.2544660712414095,-0.5789488987937762,-2.6313386,10.683177
+20,Female,Undergraduate,Ireland,4.3,TikTok,Yes,7.6,7,Single,1,Medium-Low,0,2,42,6,1,2,0.16558867178070508,1.3341740490051248,15.442402,-0.5135761
+22,Male,Graduate,India,6.4,WhatsApp,Yes,5.9,5,In Relationship,1,Medium-High,1,0,39,10,1,1,-1.6219848587408199,-2.5906033998579194,7.640578,10.153011
+19,Female,Undergraduate,Switzerland,3.3,Instagram,No,8.5,8,Single,0,Low,0,2,93,1,0,2,2.1469366587148224,2.6398852251426552,-4.5604725,-1.0348575
+21,Male,Graduate,Turkey,4.9,Instagram,Yes,7.3,6,Single,1,Medium-Low,1,0,99,1,1,2,-0.06173161072232216,-1.0248743193570407,13.962691,9.061875
+20,Female,Undergraduate,USA,7.4,TikTok,Yes,4.9,5,In Relationship,1,High,0,2,102,6,1,1,-3.309895008157308,0.5950776296291194,9.419475,1.1638455
+22,Male,Graduate,Mexico,6.2,WhatsApp,Yes,6.0,6,Single,1,Medium-Low,1,0,61,10,1,2,-1.207837685249967,-2.2989790953458544,11.934567,12.205811
+19,Female,Undergraduate,France,3.9,Instagram,No,8.1,7,In Relationship,0,Low,0,2,31,1,0,1,1.6740512737441544,2.2013756914215103,-0.72482014,2.1625628
+21,Male,Graduate,Canada,4.7,Instagram,Yes,7.5,6,Single,1,Medium-Low,1,0,18,1,1,2,0.537002569629367,-1.15006384880352,14.040496,6.800497
+20,Female,Undergraduate,Spain,4.5,TikTok,Yes,7.4,6,Single,1,Medium-Low,0,2,90,6,1,2,-0.6936126811682103,1.3037730165331636,14.4719,-2.981662
+22,Male,Graduate,Denmark,3.3,Facebook,No,8.5,8,In Relationship,0,Low,1,0,26,0,0,1,3.454589424754635,-0.9395422824652441,-2.6582313,10.579626
+19,Female,Undergraduate,Ireland,4.2,Instagram,Yes,7.7,7,Single,1,Medium-Low,0,2,42,1,1,2,0.37011791693291807,2.049020374079215,15.015395,-0.27825823
+21,Male,Graduate,India,6.5,WhatsApp,Yes,5.8,5,In Relationship,1,Medium-High,1,0,39,10,1,1,-1.8221082122540453,-2.230010016186452,7.565008,10.107139
+20,Female,Undergraduate,Switzerland,3.2,Instagram,No,8.6,8,Single,0,Low,0,2,93,1,0,2,2.3470600122280474,2.279291841471187,-4.6451273,-1.0994763
+22,Male,Graduate,Turkey,4.8,TikTok,Yes,7.4,6,Single,1,Medium-Low,1,0,99,6,1,2,-0.10772833488312847,-1.7014211196004763,12.156776,8.7867155
+19,Female,Undergraduate,USA,7.5,Instagram,Yes,4.8,5,In Relationship,1,High,0,2,102,1,1,1,-3.2638982839965016,1.2716244298725548,9.392155,2.074021
+21,Male,Graduate,Mexico,6.3,WhatsApp,Yes,5.9,6,Single,1,Medium-Low,1,0,61,10,1,2,-1.407961038763192,-1.9383857116743866,11.949854,12.457221
+20,Female,Undergraduate,France,3.8,Instagram,No,8.2,7,In Relationship,0,Low,0,2,31,1,0,1,1.8741746272573796,1.8407823077500427,-0.85761434,1.980465
+22,Male,Graduate,Canada,4.6,TikTok,Yes,7.6,6,Single,1,Medium-Low,1,0,18,6,1,2,0.49100584546856013,-1.8266106490469554,13.021363,10.965691
+19,Female,Undergraduate,Spain,4.4,Instagram,Yes,7.5,6,Single,1,Medium-Low,0,2,90,1,1,2,-0.4890834360159976,2.0186193416072533,14.569534,-4.184861
+21,Male,Graduate,Denmark,3.2,Facebook,No,8.6,8,In Relationship,0,Low,1,0,26,0,0,1,3.4129985922328157,-0.5406493739631218,-2.5276833,10.742549
+20,Female,Undergraduate,Ireland,4.1,TikTok,Yes,7.8,7,Single,1,Medium-Low,0,2,42,6,1,2,0.3241211927721115,1.3724735738357794,15.465095,-0.52252215
+22,Male,Graduate,India,6.6,WhatsApp,Yes,5.7,5,In Relationship,1,Medium-High,1,0,39,10,1,1,-1.7805173797322258,-2.6289029246885742,7.467187,10.227816
+19,Female,Undergraduate,Switzerland,3.1,Instagram,No,8.7,8,Single,0,Low,0,2,93,1,0,2,2.305469179706228,2.6781847499733096,-4.6144066,-1.0730224
+21,Male,Graduate,Turkey,4.7,Instagram,Yes,7.5,6,Single,1,Medium-Low,1,0,99,1,1,2,0.09680091026908427,-0.9865747945263862,13.884619,9.134876
+20,Female,Undergraduate,USA,7.6,TikTok,Yes,4.7,5,In Relationship,1,High,0,2,102,6,1,1,-3.4684275291487143,0.5567781047984649,9.278039,1.2609887
+22,Male,Graduate,Mexico,6.4,WhatsApp,Yes,5.8,6,Single,1,Medium-Low,1,0,61,10,1,2,-1.3663702062413734,-2.3372786201765083,11.873437,12.395737
+19,Female,Undergraduate,France,3.7,Instagram,No,8.3,7,In Relationship,0,Low,0,2,31,1,0,1,1.8325837947355608,2.2396752162521647,-0.6356635,2.2801762
+21,Male,Graduate,Canada,4.5,Instagram,Yes,7.7,6,Single,1,Medium-Low,1,0,18,1,1,2,0.6955350906207733,-1.1117643239728654,13.953699,6.6741877
+20,Female,Undergraduate,Spain,4.3,TikTok,Yes,7.6,6,Single,1,Medium-Low,0,2,90,6,1,2,-0.5350801601768042,1.342072541363818,14.530351,-3.115783
+22,Male,Graduate,Denmark,3.1,Facebook,No,8.7,8,In Relationship,0,Low,1,0,26,0,0,1,3.613121945746041,-0.9012427576345897,-2.5923238,10.636534
+19,Female,Undergraduate,Ireland,4.0,Instagram,Yes,7.9,7,Single,1,Medium-Low,0,2,42,1,1,2,0.5286504379243245,2.0873198989098687,15.049133,-0.2996593
+21,Male,Graduate,India,6.7,WhatsApp,Yes,5.6,5,In Relationship,1,Medium-High,1,0,39,10,1,1,-1.9806407332454516,-2.268309541017106,7.447329,10.187531
+20,Female,Undergraduate,Switzerland,3.0,Instagram,No,8.8,8,Single,0,Low,0,2,93,1,0,2,2.505592533219454,2.3175913663018415,-4.6051126,-1.1192899
+22,Male,Graduate,Turkey,4.6,TikTok,Yes,7.6,6,Single,1,Medium-Low,1,0,99,6,1,2,0.050804186108277555,-1.663121594769822,12.195326,8.8591385
+19,Female,Undergraduate,USA,7.7,Instagram,Yes,4.6,5,In Relationship,1,High,0,2,102,1,1,1,-3.4224308049879077,1.2333249050419002,9.32841,2.0241332
+21,Male,Graduate,Mexico,6.5,WhatsApp,Yes,5.7,6,Single,1,Medium-Low,1,0,61,10,1,2,-1.5664935597545986,-1.976685236505041,11.903293,12.525758
+20,Female,Undergraduate,France,3.6,Instagram,No,8.4,7,In Relationship,0,Low,0,2,31,1,0,1,2.0327071482487864,1.879081832580697,-0.57292587,2.086549
+22,Male,Graduate,Canada,4.4,TikTok,Yes,7.8,6,Single,1,Medium-Low,1,0,18,6,1,2,0.6495383664599663,-1.788311124216301,13.109364,10.891066
+19,Female,Undergraduate,Spain,4.2,Instagram,Yes,7.7,6,Single,1,Medium-Low,0,2,90,1,1,2,-0.33055091502459116,2.0569188664379077,14.5450535,-4.201179
+21,Male,Graduate,Denmark,3.0,Facebook,No,8.8,8,In Relationship,0,Low,1,0,26,0,0,1,3.5715311132242222,-0.5023498491324673,-2.4461398,10.814357
+20,Female,Undergraduate,Ireland,3.9,TikTok,Yes,8.0,7,Single,1,Medium-Low,0,2,42,6,1,2,0.4826537137635176,1.4107730986664337,15.473772,-0.5072865
+22,Male,Graduate,India,6.8,WhatsApp,Yes,5.5,5,In Relationship,1,Medium-High,1,0,39,10,1,1,-1.9390499007236324,-2.6672024495192286,7.4205685,10.228871
+19,Female,Undergraduate,Switzerland,2.9,Instagram,No,8.9,8,Single,0,Low,0,2,93,1,0,2,2.4640017006976347,2.716484274803964,-4.6423154,-1.2194471
+21,Male,Graduate,Turkey,4.5,Instagram,Yes,7.7,6,Single,1,Medium-Low,1,0,99,1,1,2,0.25533343126049063,-0.9482752696957316,13.817804,9.207032
+20,Female,Undergraduate,USA,7.8,TikTok,Yes,4.5,5,In Relationship,1,High,0,2,102,6,1,1,-3.6269600501401205,0.5184785799678104,9.260922,1.288386
+22,Male,Graduate,Mexico,6.6,WhatsApp,Yes,5.6,6,Single,1,Medium-Low,1,0,61,10,1,2,-1.5249027272327793,-2.375578145007163,11.792011,12.476099
+19,Female,Undergraduate,France,3.5,Instagram,No,8.5,7,In Relationship,0,Low,0,2,31,1,0,1,1.9911163157269671,2.277974741082819,-0.5237386,2.2168689
+21,Male,Graduate,Canada,4.3,Instagram,Yes,7.9,6,Single,1,Medium-Low,1,0,18,1,1,2,0.8540676116121797,-1.073464799142211,14.028332,6.764531
+20,Female,Undergraduate,Spain,4.1,TikTok,Yes,7.8,6,Single,1,Medium-Low,0,2,90,6,1,2,-0.37654763918539785,1.3803720661944725,14.545145,-3.1090095
+22,Male,Graduate,Denmark,2.9,Facebook,No,8.9,8,In Relationship,0,Low,1,0,26,0,0,1,3.7716544667374476,-0.8629432328039351,-2.4897337,10.728886
+19,Female,Undergraduate,Ireland,3.8,Instagram,Yes,8.1,7,Single,1,Medium-Low,0,2,42,1,1,2,0.6871829589157306,2.1256194237405235,15.005764,-0.24574512
+21,Male,Graduate,India,6.9,WhatsApp,Yes,5.4,5,In Relationship,1,Medium-High,1,0,39,10,1,1,-2.1391732542368573,-2.3066090658477605,7.4165564,10.1880245
+20,Female,Undergraduate,Switzerland,2.8,Instagram,No,9.0,8,Single,0,Low,0,2,93,1,0,2,2.66412505421086,2.3558908911324963,-4.594179,-1.1410881
+22,Male,Graduate,Turkey,4.4,TikTok,Yes,7.8,6,Single,1,Medium-Low,1,0,99,6,1,2,0.20933670709968363,-1.6248220699391676,12.215689,8.87566
+19,Female,Undergraduate,USA,7.9,Instagram,Yes,4.4,5,In Relationship,1,High,0,2,102,1,1,1,-3.580963325979314,1.1950253802112458,9.262577,2.0196435
+21,Male,Graduate,Mexico,6.7,WhatsApp,Yes,5.5,6,Single,1,Medium-Low,1,0,61,10,1,2,-1.725026080746005,-2.0149847613356955,11.78623,12.569651
+20,Female,Undergraduate,France,3.4,Instagram,No,8.6,7,In Relationship,0,Low,0,2,31,1,0,1,2.1912396692401925,1.9173813574113516,-0.5428629,2.0822802
+22,Male,Graduate,Canada,4.2,TikTok,Yes,8.0,6,Single,1,Medium-Low,1,0,18,6,1,2,0.8080708874513727,-1.7500115993856464,13.1517515,10.856312
+19,Female,Undergraduate,Spain,4.0,Instagram,Yes,7.9,6,Single,1,Medium-Low,0,2,90,1,1,2,-0.17201839403318478,2.0952183912685625,14.616368,-4.24609
+21,Male,Graduate,Denmark,2.8,Facebook,No,9.0,8,In Relationship,0,Low,1,0,26,0,0,1,3.7300636342156284,-0.4640503243018129,-2.386331,10.855976
+20,Female,Undergraduate,Ireland,3.7,TikTok,Yes,8.2,7,Single,1,Medium-Low,0,2,42,6,1,2,0.6411862347549236,1.449072623497088,15.453747,-0.5089962
+22,Male,Graduate,India,7.0,WhatsApp,Yes,5.3,5,In Relationship,1,Medium-High,1,0,39,10,1,1,-2.0975824217150385,-2.705501974349883,7.27707,10.248143
+19,Female,Undergraduate,Switzerland,2.7,Instagram,No,9.1,8,Single,0,Low,0,2,93,1,0,2,2.622534221689041,2.7547837996346187,-4.6107497,-1.2802896
+21,Male,Graduate,Turkey,4.3,Instagram,Yes,7.9,6,Single,1,Medium-Low,1,0,99,1,1,2,0.413865952251897,-0.9099757448650772,13.791907,9.260454
+20,Female,Undergraduate,USA,8.0,TikTok,Yes,4.3,5,In Relationship,1,High,0,2,102,6,1,1,-3.785492571131527,0.480179055137156,9.236852,1.2699609
+22,Male,Graduate,Mexico,6.8,WhatsApp,Yes,5.4,6,Single,1,Medium-Low,1,0,61,10,1,2,-1.6834352482241854,-2.4138776698378175,11.78741,12.517389
+19,Female,Undergraduate,France,3.3,Instagram,No,8.7,7,In Relationship,0,Low,0,2,31,1,0,1,2.149648836718373,2.316274265913474,-0.47452486,2.2219846
+21,Male,Graduate,Canada,4.1,Instagram,Yes,8.1,6,Single,1,Medium-Low,1,0,18,1,1,2,1.0126001326035856,-1.0351652743115565,14.086606,6.7450714
+20,Female,Undergraduate,Spain,3.9,TikTok,Yes,8.0,6,Single,1,Medium-Low,0,2,90,6,1,2,-0.21801511819399166,1.4186715910251269,14.533054,-3.171718
+22,Male,Graduate,Denmark,2.7,Facebook,No,9.1,8,In Relationship,0,Low,1,0,26,0,0,1,3.9301869877288538,-0.8246437079732809,-2.4197323,10.782262
+19,Female,Undergraduate,Ireland,3.6,Instagram,Yes,8.3,7,Single,1,Medium-Low,0,2,42,1,1,2,0.8457154799071372,2.163918948571178,15.071607,-0.2641401
+21,Male,Graduate,India,7.1,WhatsApp,Yes,5.2,5,In Relationship,1,Medium-High,1,0,39,10,1,1,-2.2977057752282635,-2.3449085906784153,7.362918,10.23682
+20,Female,Undergraduate,Switzerland,2.6,Instagram,No,9.2,8,Single,0,Low,0,2,93,1,0,2,2.822657575202266,2.39419041596315,-4.6994386,-1.1714237
+22,Male,Graduate,Turkey,4.2,TikTok,Yes,8.0,6,Single,1,Medium-Low,1,0,99,6,1,2,0.36786922809108996,-1.586522545108513,12.246615,8.908141
+19,Female,Undergraduate,USA,8.1,Instagram,Yes,4.2,5,In Relationship,1,High,0,2,102,1,1,1,-3.73949584697072,1.1567258553805915,9.2484045,1.9533621
+21,Male,Graduate,Mexico,6.9,WhatsApp,Yes,5.3,6,Single,1,Medium-Low,1,0,61,10,1,2,-1.8835586017374113,-2.05328428616635,11.7246275,12.6068125
+20,Female,Undergraduate,France,3.2,Instagram,No,8.8,7,In Relationship,0,Low,0,2,31,1,0,1,2.349772190231599,1.9556808822420062,-0.41666883,2.1845834
+22,Male,Graduate,Canada,4.0,TikTok,Yes,8.2,6,Single,1,Medium-Low,1,0,18,6,1,2,0.9666034084427787,-1.711712074554992,13.174351,10.831349
+19,Female,Undergraduate,Spain,3.8,Instagram,Yes,8.1,6,Single,1,Medium-Low,0,2,90,1,1,2,-0.013485873041778756,2.1335179160992164,14.594887,-4.2342863
+21,Male,Graduate,Denmark,2.6,Facebook,No,9.2,8,In Relationship,0,Low,1,0,26,0,0,1,3.888596155207034,-0.4257507994711587,-2.3615165,10.876715
+20,Female,Undergraduate,Ireland,3.5,TikTok,Yes,8.4,7,Single,1,Medium-Low,0,2,42,6,1,2,0.7997187557463303,1.4873721483277427,15.464859,-0.49646598
+22,Male,Graduate,India,7.2,WhatsApp,Yes,5.1,5,In Relationship,1,Medium-High,1,0,39,10,1,1,-2.2561149427064446,-2.7438014991805373,7.3858705,10.219098
+19,Female,Undergraduate,Switzerland,2.5,Instagram,No,9.3,8,Single,0,Low,0,2,93,1,0,2,2.7810667426804474,2.793083324465273,-4.7320414,-1.2941227
+21,Male,Graduate,Turkey,4.1,Instagram,Yes,8.1,6,Single,1,Medium-Low,1,0,99,1,1,2,0.5723984732433031,-0.8716762200344228,13.818086,9.204774
+20,Female,Undergraduate,USA,8.2,TikTok,Yes,4.1,5,In Relationship,1,High,0,2,102,6,1,1,-3.944025092122933,0.4418795303065015,9.216877,1.3127782
+22,Male,Graduate,Mexico,7.0,WhatsApp,Yes,5.2,6,Single,1,Medium-Low,1,0,61,10,1,2,-1.8419677692155918,-2.452177194668472,11.785066,12.525918
+19,Female,Undergraduate,France,3.1,Instagram,No,8.9,7,In Relationship,0,Low,0,2,31,1,0,1,2.30818135770978,2.3545737907441278,-0.4692593,2.2510083
+21,Male,Graduate,Canada,3.9,Instagram,Yes,8.3,6,Single,1,Medium-Low,1,0,18,1,1,2,1.1711326535949922,-0.996865749480902,14.109925,6.7403617
+20,Female,Undergraduate,Spain,3.7,TikTok,Yes,8.2,6,Single,1,Medium-Low,0,2,90,6,1,2,-0.0594825972025857,1.4569711158557812,14.522063,-3.1935816
+22,Male,Graduate,Denmark,2.5,Facebook,No,9.3,8,In Relationship,0,Low,1,0,26,0,0,1,4.088719508720261,-0.7863441831426262,-2.3481314,10.884137
+19,Female,Undergraduate,Ireland,3.4,Instagram,Yes,8.5,7,Single,1,Medium-Low,0,2,42,1,1,2,1.0042480008985433,2.202218473401832,15.095107,-0.30769464
+21,Male,Graduate,India,7.3,WhatsApp,Yes,5.0,5,In Relationship,1,Medium-High,1,0,39,10,1,1,-2.45623829621967,-2.383208115509069,7.372842,10.233508
+20,Female,Undergraduate,Switzerland,2.4,Instagram,No,9.4,8,Single,0,Low,0,2,93,1,0,2,2.981190096193673,2.432489940793805,-4.747225,-1.265512
+22,Male,Graduate,Turkey,4.0,TikTok,Yes,8.2,6,Single,1,Medium-Low,1,0,99,6,1,2,0.5264017490824962,-1.5482230202778586,12.280444,8.945816
+19,Female,Undergraduate,USA,8.3,Instagram,Yes,4.0,5,In Relationship,1,High,0,2,102,1,1,1,-3.898028367962127,1.118426330549937,9.24713,1.9694803
+21,Male,Graduate,Mexico,7.1,WhatsApp,Yes,5.1,6,Single,1,Medium-Low,1,0,61,10,1,2,-2.042091122728817,-2.091583810997004,11.718086,12.593683
+20,Female,Undergraduate,France,3.0,Instagram,No,9.0,7,In Relationship,0,Low,0,2,31,1,0,1,2.508304711223005,1.9939804070726603,-0.4667922,2.19568
+22,Male,Graduate,Canada,3.8,TikTok,Yes,8.4,6,Single,1,Medium-Low,1,0,18,6,1,2,1.1251359294341854,-1.6734125497243375,13.152569,10.853956
+19,Female,Undergraduate,Spain,3.6,Instagram,Yes,8.3,6,Single,1,Medium-Low,0,2,90,1,1,2,0.1450466479496279,2.171817440929871,14.619196,-4.2304144
+21,Male,Graduate,Denmark,2.4,Facebook,No,9.4,8,In Relationship,0,Low,1,0,26,0,0,1,4.047128676198441,-0.3874512746405041,-2.3819187,10.856345
+20,Female,Undergraduate,Ireland,3.3,TikTok,Yes,8.6,7,Single,1,Medium-Low,0,2,42,6,1,2,0.9582512767377364,1.525671673158397,15.432486,-0.52111626
+22,Male,Graduate,India,7.4,WhatsApp,Yes,4.9,5,In Relationship,1,Medium-High,1,0,39,10,1,1,-2.4146474636978508,-2.782101024011192,7.356982,10.179931
+19,Female,Undergraduate,Switzerland,2.3,Instagram,No,9.5,8,Single,0,Low,0,2,93,1,0,2,2.9395992636718535,2.8313828492959274,-4.675261,-1.2476461
+21,Male,Graduate,Turkey,3.9,Instagram,Yes,8.3,6,Single,1,Medium-Low,1,0,99,1,1,2,0.7309309942347096,-0.8333766952037683,13.769862,9.249422
+20,Female,Undergraduate,USA,8.4,TikTok,Yes,3.9,5,In Relationship,1,High,0,2,102,6,1,1,-4.102557613114339,0.40358000547584694,9.154495,1.3936937
+22,Male,Graduate,Mexico,7.2,WhatsApp,Yes,5.0,6,Single,1,Medium-Low,1,0,61,10,1,2,-2.000500290206998,-2.490476719499126,11.747344,12.557233
+19,Female,Undergraduate,France,2.9,Instagram,No,9.1,7,In Relationship,0,Low,0,2,31,1,0,1,2.4667138787011855,2.3928733155747826,-0.36671975,2.276033
+21,Male,Graduate,Canada,3.7,Instagram,Yes,8.5,6,Single,1,Medium-Low,1,0,18,1,1,2,1.329665174586398,-0.9585662246502477,14.1369095,6.727484
+20,Female,Undergraduate,Spain,3.5,TikTok,Yes,8.4,6,Single,1,Medium-Low,0,2,90,6,1,2,0.09904992378882096,1.4952706406864358,14.501651,-3.2856529
+22,Male,Graduate,Denmark,2.3,Facebook,No,9.5,8,In Relationship,0,Low,1,0,26,0,0,1,4.2472520297116665,-0.7480446583119719,-2.3403733,10.885124
+19,Female,Undergraduate,Ireland,3.2,Instagram,Yes,8.7,7,Single,1,Medium-Low,0,2,42,1,1,2,1.162780521889949,2.2405179982324865,15.066601,-0.27905077
+21,Male,Graduate,India,7.5,WhatsApp,Yes,4.8,5,In Relationship,1,Medium-High,1,0,39,10,1,1,-2.6147708172110766,-2.421507640339724,7.366715,10.234709
+20,Female,Undergraduate,Switzerland,2.2,Instagram,No,9.6,8,Single,0,Low,0,2,93,1,0,2,3.1397226171850785,2.4707894656244593,-4.7155867,-1.2922797
+22,Male,Graduate,Turkey,3.8,TikTok,Yes,8.4,6,Single,1,Medium-Low,1,0,99,6,1,2,0.6849342700739028,-1.509923495447204,12.28176,8.956602
+19,Female,Undergraduate,USA,8.5,Instagram,Yes,3.8,5,In Relationship,1,High,0,2,102,1,1,1,-4.056560888953532,1.0801268057192825,9.274753,1.9771321
+21,Male,Graduate,Mexico,7.3,WhatsApp,Yes,4.9,6,Single,1,Medium-Low,1,0,61,10,1,2,-2.2006236437202236,-2.129883335827659,11.668983,12.643187
+20,Female,Undergraduate,France,2.8,Instagram,No,9.2,7,In Relationship,0,Low,0,2,31,1,0,1,2.666837232214411,2.032279931903315,-0.42748567,2.2250764
+22,Male,Graduate,Canada,3.6,TikTok,Yes,8.6,6,Single,1,Medium-Low,1,0,18,6,1,2,1.2836684504255913,-1.6351130248936832,13.202564,10.805477
+19,Female,Undergraduate,Brazil,6.2,WhatsApp,Yes,6.3,6,Single,1,Medium-Low,0,2,16,10,1,2,-1.7110729540031469,1.018542033114017,14.381449,-1.0752399
+21,Male,Graduate,China,4.5,WeChat,No,7.8,7,In Relationship,0,Low,1,0,20,9,0,1,1.737036482006955,-1.4071608661960082,-3.1028094,8.09819
+20,Female,Undergraduate,Netherlands,3.8,Instagram,No,8.2,8,Single,0,Low,0,2,67,1,0,2,2.094648337352969,2.1328136107351057,-4.622822,-0.6272686
+22,Male,Graduate,New Zealand,4.7,Instagram,Yes,7.5,7,In Relationship,1,Medium-Low,1,0,68,1,1,1,0.8496285300024736,-1.4702895063157484,10.133528,6.7780843
+19,Female,Undergraduate,Singapore,5.1,TikTok,Yes,7.0,6,Single,1,Medium-Low,0,2,85,6,1,2,-1.181007805191255,1.5794239829927637,14.514915,-2.5879025
+21,Male,Graduate,Malaysia,5.5,WhatsApp,Yes,6.8,6,Single,1,Medium-Low,1,0,58,10,1,2,-0.7165838946196369,-1.7807936066124535,12.191061,12.163265
+20,Female,Undergraduate,UAE,6.5,Instagram,Yes,6.5,5,In Relationship,1,Medium-High,0,2,100,1,1,1,-2.052906344132551,1.1524862324508507,9.873945,2.2988112
+22,Male,Graduate,Poland,4.2,Facebook,No,7.9,7,Single,0,Low,1,0,78,0,0,2,2.1179260824963113,-0.9341850596985527,-5.7316008,8.862407
+19,Female,Undergraduate,India,6.8,WhatsApp,Yes,6.0,5,In Relationship,1,Medium-High,0,2,39,10,1,1,-2.6049550568663142,0.7620442431122828,12.270131,1.7768759
+21,Male,Graduate,Canada,4.8,Instagram,Yes,7.4,7,Single,1,Medium-Low,1,0,18,1,1,2,0.8975448985073021,-1.0802297010429427,14.108935,6.7325335
+20,Female,Undergraduate,Brazil,6.1,Instagram,Yes,6.4,6,Single,1,Medium-Low,0,2,16,1,1,2,-1.067933460676663,1.2266647992720905,13.800805,-0.64642566
+22,Male,Graduate,China,4.4,WeChat,No,7.9,7,In Relationship,0,Low,1,0,20,9,0,1,1.9371598355201805,-1.767754249867476,-3.1999803,8.150361
+19,Female,Undergraduate,Netherlands,3.7,TikTok,No,8.3,8,Single,0,Low,0,2,67,6,0,2,1.8069374271571181,2.2157531026652606,-4.2410564,0.6362814
+21,Male,Graduate,New Zealand,4.6,Instagram,Yes,7.6,7,In Relationship,1,Medium-Low,1,0,68,1,1,1,0.8080376974806546,-1.0713965978136262,10.128688,6.7762537
+20,Female,Undergraduate,Singapore,5.2,TikTok,Yes,6.9,6,Single,1,Medium-Low,0,2,85,6,1,2,-1.1394169726694359,1.1805310744906412,14.437571,-2.6609018
+22,Male,Graduate,Malaysia,5.6,WhatsApp,Yes,6.7,6,Single,1,Medium-Low,1,0,58,10,1,2,-0.6749930620978175,-2.1796865151145752,12.164577,11.993618
+19,Female,Undergraduate,UAE,6.6,Instagram,Yes,6.4,5,In Relationship,1,Medium-High,0,2,100,1,1,1,-2.2530296976457764,1.5130796161223183,9.790536,2.2994676
+21,Male,Graduate,Poland,4.1,Facebook,No,8.0,7,Single,0,Low,1,0,78,0,0,2,2.0763352499744925,-0.5352921511964304,-5.833669,8.840683
+20,Female,Undergraduate,India,6.9,WhatsApp,Yes,5.9,5,In Relationship,1,Medium-High,0,2,39,10,1,1,-2.5633642243444954,0.36315133461016047,12.249914,1.7953136
+22,Male,Graduate,Canada,4.7,TikTok,Yes,7.5,7,Single,1,Medium-Low,1,0,18,6,1,2,0.8515481743464952,-1.756776501286378,13.03678,10.953547
+19,Female,Undergraduate,Brazil,6.0,WhatsApp,Yes,6.5,6,Single,1,Medium-Low,0,2,16,10,1,2,-1.5525404330117403,1.0568415579446713,14.424841,-1.0345702
+21,Male,Graduate,China,4.3,WeChat,No,8.0,7,In Relationship,0,Low,1,0,20,9,0,1,1.8955690029983616,-1.3688613413653539,-3.1022718,8.101768
+20,Female,Undergraduate,Netherlands,3.6,Instagram,No,8.4,8,Single,0,Low,0,2,67,1,0,2,2.2531808583443755,2.17111313556576,-4.6004496,-0.7054033
+22,Male,Graduate,New Zealand,4.5,Facebook,Yes,7.7,7,In Relationship,1,Medium-Low,1,0,68,0,1,1,1.0573850665286864,-1.3687992981707005,10.10781,6.788496
+19,Female,Undergraduate,Singapore,5.3,TikTok,Yes,6.8,6,Single,1,Medium-Low,0,2,85,6,1,2,-1.3395403261826613,1.541124458162109,14.490049,-2.5330842
+21,Male,Graduate,Malaysia,5.7,WhatsApp,Yes,6.6,6,Single,1,Medium-Low,1,0,58,10,1,2,-0.8751164156110433,-1.819093131443108,12.145486,12.208381
+20,Female,Undergraduate,UAE,6.7,Instagram,Yes,6.3,5,In Relationship,1,Medium-High,0,2,100,1,1,1,-2.2114388651239576,1.1141867076201961,9.806314,2.3374062
+22,Male,Graduate,Poland,4.0,Facebook,No,8.1,7,Single,0,Low,1,0,78,0,0,2,2.2764586034877174,-0.8958855348678985,-5.768691,8.874988
+19,Female,Undergraduate,India,7.0,WhatsApp,Yes,5.8,5,In Relationship,1,Medium-High,0,2,39,10,1,1,-2.763487577857721,0.7237447182816283,12.302274,1.8090599
+21,Male,Graduate,Canada,4.6,Instagram,Yes,7.6,7,Single,1,Medium-Low,1,0,18,1,1,2,1.0560774194987081,-1.0419301762122883,14.168199,6.6873755
+20,Female,Undergraduate,Brazil,5.9,TikTok,Yes,6.6,6,Single,1,Medium-Low,0,2,16,6,1,2,-1.1555210173592896,0.9490109075307774,14.317386,-1.1064453
+22,Male,Graduate,China,4.2,WeChat,No,8.1,7,In Relationship,0,Low,1,0,20,9,0,1,2.0956923565115866,-1.7294547250368215,-3.0995054,8.191082
+19,Female,Undergraduate,Netherlands,3.5,Instagram,No,8.5,8,Single,0,Low,0,2,67,1,0,2,2.2115900258225563,2.5700060440678825,-4.5903993,-0.6309105
+21,Male,Graduate,New Zealand,4.4,Facebook,Yes,7.8,7,In Relationship,1,Medium-Low,1,0,68,0,1,1,1.0157942340068669,-0.9699063896685783,10.133023,6.7839847
+20,Female,Undergraduate,Singapore,5.4,TikTok,Yes,6.7,6,Single,1,Medium-Low,0,2,85,6,1,2,-1.297949493660842,1.1422315496599866,14.425695,-2.589149
+22,Male,Graduate,Malaysia,5.8,WhatsApp,Yes,6.5,6,Single,1,Medium-Low,1,0,58,10,1,2,-0.8335255830892239,-2.21798603994523,12.047522,12.033436
+19,Female,Undergraduate,UAE,6.8,Instagram,Yes,6.2,5,In Relationship,1,Medium-High,0,2,100,1,1,1,-2.4115622186371826,1.474780091291664,9.700387,2.2336347
+21,Male,Graduate,Poland,3.9,Facebook,No,8.2,7,Single,0,Low,1,0,78,0,0,2,2.2348677709658986,-0.4969926263657762,-5.88723,8.873021
+20,Female,Undergraduate,India,7.1,WhatsApp,Yes,5.7,5,In Relationship,1,Medium-High,0,2,39,10,1,1,-2.7218967453359015,0.32485180977950595,12.299932,1.8294553
+22,Male,Graduate,Canada,4.5,TikTok,Yes,7.7,7,Single,1,Medium-Low,1,0,18,6,1,2,1.0100806953379016,-1.7184769764557235,13.133724,10.863042
+19,Female,Undergraduate,Brazil,5.8,WhatsApp,Yes,6.7,6,Single,1,Medium-Low,0,2,16,10,1,2,-1.3940079120203337,1.0951410827753258,14.408625,-1.040204
+21,Male,Graduate,China,4.1,WeChat,No,8.2,7,In Relationship,0,Low,1,0,20,9,0,1,2.0541015239897678,-1.3305618165346993,-3.1207955,8.102493
+20,Female,Undergraduate,Netherlands,3.4,Instagram,No,8.6,8,Single,0,Low,0,2,67,1,0,2,2.4117133793357812,2.209412660396415,-4.653501,-0.6248496
+22,Male,Graduate,New Zealand,4.3,Instagram,Yes,7.9,7,In Relationship,1,Medium-Low,1,0,68,1,1,1,1.1666935719852862,-1.3936904566544395,10.12526,6.7375193
+19,Female,Undergraduate,Singapore,5.5,TikTok,Yes,6.6,6,Single,1,Medium-Low,0,2,85,6,1,2,-1.4980728471740676,1.5028249333314547,14.441498,-2.5056767
+21,Male,Graduate,Malaysia,5.9,WhatsApp,Yes,6.4,6,Single,1,Medium-Low,1,0,58,10,1,2,-1.0336489366024493,-1.8573926562737624,12.1477785,12.252302
+20,Female,Undergraduate,UAE,6.9,Instagram,Yes,6.1,5,In Relationship,1,Medium-High,0,2,100,1,1,1,-2.3699713861153637,1.0758871827895418,9.708914,2.2739797
+22,Male,Graduate,Poland,3.8,Facebook,No,8.3,7,Single,0,Low,1,0,78,0,0,2,2.4349911244791245,-0.8575860100372438,-5.775624,8.809806
+19,Female,Undergraduate,India,7.2,WhatsApp,Yes,5.6,5,In Relationship,1,Medium-High,0,2,39,10,1,1,-2.9220200988491274,0.6854451934509739,12.3217125,1.8064405
+21,Male,Graduate,Canada,4.4,Instagram,Yes,7.8,7,Single,1,Medium-Low,1,0,18,1,1,2,1.2146099404901143,-1.003630651381634,14.247159,6.650121
+20,Female,Undergraduate,Brazil,5.7,TikTok,Yes,6.8,6,Single,1,Medium-Low,0,2,16,6,1,2,-0.9969884963678831,0.9873104323614318,14.391653,-1.0711673
+22,Male,Graduate,China,4.0,WeChat,No,8.3,7,In Relationship,0,Low,1,0,20,9,0,1,2.254224877502993,-1.6911552002061672,-3.1081784,8.184185
+19,Female,Undergraduate,Netherlands,3.3,Instagram,No,8.7,8,Single,0,Low,0,2,67,1,0,2,2.370122546813962,2.6083055688985373,-4.6126184,-0.5811732
+21,Male,Graduate,New Zealand,4.2,Facebook,Yes,8.0,7,In Relationship,1,Medium-Low,1,0,68,0,1,1,1.1743267549982732,-0.9316068648379238,10.171021,6.813433
+20,Female,Undergraduate,Singapore,5.6,TikTok,Yes,6.5,6,Single,1,Medium-Low,0,2,85,6,1,2,-1.4564820146522481,1.1039320248293323,14.386788,-2.5831451
+22,Male,Graduate,Malaysia,6.0,WhatsApp,Yes,6.3,6,Single,1,Medium-Low,1,0,58,10,1,2,-0.9920581040806303,-2.2562855647758844,12.052795,12.062266
+19,Female,Undergraduate,UAE,7.0,Instagram,Yes,6.0,5,In Relationship,1,Medium-High,0,2,100,1,1,1,-2.570094739628589,1.4364805664610094,9.6873865,2.239864
+21,Male,Graduate,Poland,3.7,Facebook,No,8.4,7,Single,0,Low,1,0,78,0,0,2,2.3934002919573047,-0.4586931015351216,-5.8532057,8.795115
+20,Female,Undergraduate,India,7.3,WhatsApp,Yes,5.5,5,In Relationship,1,Medium-High,0,2,39,10,1,1,-2.880429266327308,0.2865522849488515,12.262947,1.8566856
+22,Male,Graduate,Canada,4.3,TikTok,Yes,7.9,7,Single,1,Medium-Low,1,0,18,6,1,2,1.168613216329308,-1.6801774516250692,13.135285,10.864404
+19,Female,Undergraduate,Brazil,5.6,WhatsApp,Yes,6.9,6,Single,1,Medium-Low,0,2,16,10,1,2,-1.2354753910289276,1.1334406076059802,14.447144,-1.0076032
+21,Male,Graduate,China,3.9,WeChat,No,8.4,7,In Relationship,0,Low,1,0,20,9,0,1,2.2126340449811743,-1.292262291704045,-3.1681926,8.036076
+20,Female,Undergraduate,Netherlands,3.2,Instagram,No,8.8,8,Single,0,Low,0,2,67,1,0,2,2.570245900327188,2.247712185227069,-4.6626773,-0.7139979
+22,Male,Graduate,New Zealand,4.1,Instagram,Yes,8.1,7,In Relationship,1,Medium-Low,1,0,68,1,1,1,1.3252260929766924,-1.355390931823785,10.0927305,6.7475038
+19,Female,Undergraduate,Singapore,5.7,TikTok,Yes,6.4,6,Single,1,Medium-Low,0,2,85,6,1,2,-1.6566053681654738,1.4645254085008002,14.441096,-2.4531417
+21,Male,Graduate,Malaysia,6.1,WhatsApp,Yes,6.2,6,Single,1,Medium-Low,1,0,58,10,1,2,-1.1921814575938554,-1.8956921811044167,12.0279,12.390502
+20,Female,Undergraduate,UAE,7.1,Instagram,Yes,5.9,5,In Relationship,1,Medium-High,0,2,100,1,1,1,-2.52850390710677,1.0375876579588874,9.666026,2.2202241
+22,Male,Graduate,Poland,3.6,Facebook,No,8.5,7,Single,0,Low,1,0,78,0,0,2,2.59352364547053,-0.8192864852065894,-5.784468,8.8165865
+19,Female,Undergraduate,India,7.4,WhatsApp,Yes,5.4,5,In Relationship,1,Medium-High,0,2,39,10,1,1,-3.0805526198405335,0.6471456686203195,12.301124,1.810083
+21,Male,Graduate,Canada,4.2,Instagram,Yes,8.0,7,Single,1,Medium-Low,1,0,18,1,1,2,1.3731424614815206,-0.9653311265509793,14.18215,6.687894
+20,Female,Undergraduate,Spain,6.1,Instagram,Yes,7.2,5,Single,1,Medium-Low,0,2,90,1,1,2,-1.5823552305689288,1.3706345068521784,12.966973,-1.7482342
+23,Male,Graduate,Denmark,3.8,Twitter,No,7.8,8,In Relationship,0,Low,1,0,26,7,0,1,2.75266051651712,-1.878267335624885,-3.1269577,8.41421
+19,Female,Undergraduate,Ireland,5.5,TikTok,Yes,6.8,6,Single,1,Medium-High,0,2,42,6,1,2,-1.1824989564931394,1.4369327595229997,14.427386,-1.2898784
+22,Male,Graduate,India,7.2,Facebook,Yes,5.9,4,Single,1,High,1,0,39,0,1,2,-1.8998267139406568,-1.9868997381224753,13.172844,7.6827545
+21,Female,Undergraduate,Switzerland,4.2,Instagram,No,7.5,7,In Relationship,0,Low,0,2,93,1,0,1,1.2181923132386077,1.4782324142492773,-1.1914221,2.400525
+24,Male,Graduate,Turkey,6.8,TikTok,Yes,6.2,5,Single,1,Medium-High,1,0,99,6,1,2,-1.563601588004278,-2.849293323074694,12.438994,8.137496
+20,Female,Undergraduate,USA,5.9,Instagram,Yes,6.7,6,In Relationship,1,Medium-Low,0,2,102,1,1,1,-1.312142548624776,1.3186088603000827,10.566325,2.4367251
+22,Male,Graduate,Mexico,6.5,Facebook,Yes,6.1,5,Single,1,Medium-High,1,0,61,0,1,2,-1.2294317206968968,-1.7717088360328948,13.089579,7.7851686
+19,Female,Undergraduate,France,4.7,Twitter,No,7.4,7,Single,0,Low,0,2,31,7,0,2,0.761830694245984,1.8098682390184695,-4.2191343,0.67445266
+23,Male,Graduate,Canada,5.2,Instagram,Yes,7.0,6,In Relationship,1,Medium-Low,1,0,18,1,1,1,0.4060751505260412,-2.1356845439619563,13.393141,6.935655
+21,Female,Undergraduate,UK,6.3,TikTok,Yes,6.4,5,Single,1,Medium-High,0,2,101,6,1,2,-2.171590978574279,0.5961457012239075,13.848453,-2.33988
+24,Male,Graduate,Italy,4.9,Facebook,No,7.3,7,In Relationship,0,Low,1,0,44,0,0,1,2.054185442581593,-2.01628115891859,-3.8024673,10.340773
+20,Female,Undergraduate,Russia,6.7,Instagram,Yes,6.0,5,Single,1,Medium-High,0,2,82,1,1,2,-2.2601358565444665,1.1768939298847494,12.841961,-1.6676071
+22,Male,Graduate,China,5.8,WeChat,Yes,6.5,6,In Relationship,1,Medium-Low,1,0,20,9,1,1,-0.5540975115020406,-2.3618795162122703,7.8995404,10.220308
+19,Female,Undergraduate,Japan,4.5,Twitter,No,7.6,8,Single,0,Low,0,2,46,7,0,2,1.2786529788035683,1.9674274248170902,-4.225226,0.68303657
+23,Male,Graduate,Poland,6.4,Facebook,Yes,6.3,5,Single,1,Medium-High,1,0,78,0,1,2,-1.0807530747490208,-2.0875405462422982,12.971159,7.894629
+21,Female,Undergraduate,Finland,4.1,Instagram,No,7.7,7,In Relationship,0,Low,0,2,30,1,0,1,1.68078093714208,1.380673179235673,-1.1504372,1.8715252
+24,Male,Graduate,Spain,6.6,TikTok,Yes,6.2,5,Single,1,Medium-High,1,0,90,6,1,2,-1.4380443615612724,-2.8500575605147316,12.433586,8.1463995
+20,Female,Undergraduate,Denmark,4.4,Instagram,No,7.4,7,In Relationship,0,Low,0,2,26,1,0,1,1.3438634161861043,1.6948935045319367,-1.2838705,1.8814081
+22,Male,Graduate,Ireland,5.7,Twitter,Yes,6.8,6,Single,1,Medium-Low,1,0,42,7,1,2,-0.4377472717616012,-2.0206600499694667,12.781808,11.157409
+19,Female,Undergraduate,India,7.0,Instagram,Yes,5.8,4,Single,1,High,0,2,39,1,1,2,-2.7839697247582467,1.3338625488434757,13.19236,-1.4371179
+23,Male,Graduate,Switzerland,4.3,Facebook,No,7.5,7,In Relationship,0,Low,1,0,93,0,0,1,1.978857901501501,-1.4645352760100072,-4.0518413,9.920449
+21,Female,Undergraduate,Turkey,6.9,TikTok,Yes,6.1,5,Single,1,Medium-High,0,2,99,6,1,2,-2.5134894797248553,0.5085578276528522,13.8103,-2.2665143
+24,Male,Graduate,USA,5.6,Instagram,Yes,6.9,6,In Relationship,1,Medium-Low,1,0,102,1,1,1,-0.12380833791170825,-2.391135067581332,10.95505,7.56246
+20,Female,Undergraduate,Mexico,6.2,Facebook,Yes,6.3,5,Single,1,Medium-High,0,2,61,0,1,2,-1.7823407724335778,1.2725490623714373,12.997599,-1.6014215
+21,Male,Undergraduate,France,5.8,Instagram,Yes,6.7,6,Single,1,Medium-Low,1,2,31,1,1,2,-0.5742660426466168,-0.10450666045322005,12.404885,-0.2904483
+23,Female,Graduate,Canada,4.9,TikTok,No,7.3,7,In Relationship,0,Low,0,0,18,6,0,1,1.5627531850886212,-1.0290067290811704,-3.4207404,8.896175
+20,Male,Undergraduate,UK,6.4,Facebook,Yes,6.2,5,Single,1,Medium-High,1,2,101,0,1,2,-1.9007831645622304,0.28628067720744976,11.856061,-0.62133116
+22,Female,Graduate,Italy,5.1,Twitter,No,7.1,7,In Relationship,0,Low,0,0,44,7,0,1,1.0928402574786233,-0.6982758230998496,-3.404015,8.803506
+19,Male,Undergraduate,Russia,6.7,Instagram,Yes,6.0,4,Single,1,Medium-High,1,2,82,1,1,2,-2.6042711696027525,0.42849981411908156,11.963521,-0.63090396
+24,Female,Graduate,China,5.5,WeChat,Yes,6.8,6,In Relationship,1,Medium-Low,0,0,20,9,1,1,-0.29111491331276135,-2.02476316946332,8.019413,10.290682
+21,Male,Undergraduate,Japan,4.3,Twitter,No,7.6,8,Single,0,Low,1,2,46,7,0,2,1.8135434651300166,0.18618899400214048,-3.5815802,1.7466538
+23,Female,Graduate,Poland,6.2,Instagram,Yes,6.4,5,Single,1,Medium-High,0,0,78,1,1,2,-1.2289182336417335,-1.0837275089472063,12.033899,7.4105644
+20,Male,Undergraduate,Finland,4.5,Facebook,No,7.4,7,In Relationship,0,Low,1,2,30,0,0,1,1.5495564820258645,0.7183037631967216,-2.656156,1.9135487
+22,Female,Graduate,Spain,6.3,TikTok,Yes,6.3,5,Single,1,Medium-High,0,0,90,6,1,2,-1.7403767254749587,-1.0148669412140563,12.012074,7.6558948
+19,Male,Undergraduate,Denmark,4.7,Instagram,No,7.2,7,In Relationship,0,Low,1,2,26,1,0,1,1.2426812060307855,0.988483167593919,-2.568628,2.006174
+24,Female,Graduate,Ireland,5.9,Twitter,Yes,6.6,6,Single,1,Medium-Low,0,0,42,7,1,2,-0.5710959760508375,-1.779292515297152,11.976327,7.8027725
+21,Male,Undergraduate,India,7.1,Facebook,Yes,5.7,4,Single,1,High,1,2,39,0,1,2,-2.355767414351224,-0.4207361741076068,12.116786,-0.52444
+23,Female,Graduate,Switzerland,4.4,Instagram,No,7.4,7,In Relationship,0,Low,0,0,93,1,0,1,1.633837256138117,-0.5077223700631688,-3.802596,9.515808
+20,Male,Undergraduate,Turkey,6.6,TikTok,Yes,6.2,5,Single,1,Medium-High,1,2,99,6,1,2,-2.26190401195527,-0.11430140248638511,11.692821,-0.47253415
+22,Female,Graduate,USA,5.4,Instagram,Yes,6.9,6,In Relationship,1,Medium-Low,0,0,102,1,1,1,-0.5054069623210978,-0.5750942106959835,11.251069,7.0988526
+19,Male,Undergraduate,Mexico,6.5,Facebook,Yes,6.1,5,Single,1,Medium-High,1,2,61,0,1,2,-1.8835229825888964,0.5661387254334197,11.972835,-0.5746569
+24,Female,Graduate,France,4.8,Twitter,No,7.3,7,In Relationship,0,Low,0,0,31,7,0,1,1.6020595790174705,-1.4370009679449725,-3.4051464,8.822967
+21,Male,Undergraduate,Canada,5.7,Instagram,Yes,6.7,6,Single,1,Medium-Low,1,2,18,1,1,2,-0.4652934281342206,-0.12204503795540736,12.479381,-0.30875346
+23,Female,Graduate,UK,6.1,TikTok,Yes,6.4,5,Single,1,Medium-High,0,0,101,6,1,2,-1.5617108787412723,-1.344557501120413,11.998323,7.7131996
+20,Male,Undergraduate,Italy,4.6,Facebook,No,7.2,7,In Relationship,0,Low,1,2,44,0,0,1,1.3532626890934274,0.716962212289591,-2.6723526,1.9496118
+22,Female,Graduate,Russia,6.8,Instagram,Yes,5.9,4,Single,1,High,0,0,82,1,1,2,-2.24597653753933,-0.8893441580860012,12.041657,7.370874
+19,Male,Undergraduate,China,5.6,WeChat,Yes,6.8,6,In Relationship,1,Medium-Low,1,2,20,9,1,1,-1.008712957386196,0.02471672598242656,12.122727,0.6084971
+24,Female,Graduate,Japan,4.2,Twitter,No,7.5,8,Single,0,Low,0,0,46,7,0,2,2.2484840281519682,-1.114253765167743,-4.0340495,8.679953
+21,Male,Undergraduate,Poland,6.3,TikTok,Yes,6.3,5,Single,1,Medium-High,1,2,78,6,1,2,-1.8710083713530719,-0.49987962423154036,11.753965,-0.5912326
+23,Female,Graduate,Finland,4.4,Instagram,No,7.4,7,In Relationship,0,Low,0,0,30,1,0,1,1.976216324529448,-0.634880523389828,-3.5066178,9.076107
+20,Male,Undergraduate,Spain,6.5,Facebook,Yes,6.2,5,Single,1,Medium-High,1,2,90,0,1,2,-1.8793256577826911,0.2553778534423383,11.892588,-0.6423714
+22,Female,Graduate,Denmark,4.6,Twitter,No,7.3,7,In Relationship,0,Low,0,0,26,7,0,1,1.4641642658767755,-0.6702053796668704,-3.3910005,8.826704
+19,Male,Undergraduate,Ireland,5.8,Instagram,Yes,6.6,6,Single,1,Medium-Low,1,2,42,1,1,2,-0.9167039959569039,0.6667326930701545,12.334972,-0.21333581
+24,Female,Graduate,India,7.0,TikTok,Yes,5.8,4,Single,1,High,0,0,39,6,1,2,-2.1342843545052346,-2.079424721368396,11.98803,7.6837535
+21,Male,Undergraduate,Switzerland,4.5,Facebook,No,7.3,7,In Relationship,0,Low,1,2,93,0,0,1,1.2870912116356172,0.45526961453885795,-2.8205404,1.8978598
+23,Female,Graduate,Turkey,6.7,Instagram,Yes,6.1,5,Single,1,Medium-High,0,0,99,1,1,2,-1.657489302217816,-1.1161919581195006,12.105671,7.472389
+20,Male,Undergraduate,USA,5.5,Twitter,Yes,6.8,6,In Relationship,1,Medium-Low,1,2,102,7,1,1,-1.1967211155672428,-0.0544370092947113,11.370633,0.14035876
+22,Female,Graduate,Mexico,6.4,Facebook,Yes,6.2,5,Single,1,Medium-High,0,0,61,0,1,2,-1.3666958295340679,-0.7134057219410086,12.056364,7.3404746
+19,Male,Undergraduate,France,4.7,Instagram,No,7.2,7,In Relationship,0,Low,1,2,31,1,0,1,1.2155082640949655,0.9985750845246063,-2.6612265,1.9607426
+24,Female,Graduate,Canada,5.6,TikTok,Yes,6.7,6,Single,1,Medium-Low,0,0,18,6,1,2,-0.23552964776986243,-1.727992057799531,11.962822,7.8656497
+21,Male,Undergraduate,UK,6.2,Facebook,Yes,6.3,5,Single,1,Medium-High,1,2,101,0,1,2,-1.6623368455697405,-0.0656120999464185,11.828812,-0.66123664
+23,Female,Graduate,Italy,4.8,Twitter,No,7.1,7,In Relationship,0,Low,0,0,44,7,0,1,1.3286662469339396,-1.051917149633846,-3.406004,8.846229
+20,Male,Undergraduate,Russia,6.9,Instagram,Yes,5.9,4,Single,1,High,1,2,82,1,1,2,-2.601003302560198,0.020906299099359548,11.95167,-0.63998896
+22,Female,Graduate,China,5.7,WeChat,Yes,6.7,6,In Relationship,1,Medium-Low,0,0,20,9,1,1,-0.6504183253227735,-1.2931272462226564,8.038892,10.294879
+19,Male,Undergraduate,Japan,4.4,Twitter,No,7.4,8,Single,0,Low,1,2,46,7,0,2,1.4516197235828308,0.916076367862676,-3.6749165,1.669185
+24,Female,Graduate,Poland,6.1,TikTok,Yes,6.4,5,Single,1,Medium-High,0,0,78,6,1,2,-1.3158582528189784,-1.7707234650883692,12.00368,7.7040696
+21,Male,Undergraduate,Finland,4.3,Instagram,No,7.5,7,In Relationship,0,Low,1,2,30,1,0,1,1.7387787854835484,0.3032203027284596,-2.6465943,1.983916
+23,Female,Graduate,Spain,6.4,Facebook,Yes,6.2,5,Single,1,Medium-High,0,0,90,0,1,2,-1.4034417997443012,-1.0346157498298176,12.057544,7.4573565
+20,Male,Undergraduate,Denmark,4.5,Twitter,No,7.3,7,In Relationship,0,Low,1,2,26,7,0,1,1.185783431814437,0.2574462905536895,-2.755013,2.1186793
+22,Female,Graduate,Ireland,5.9,Instagram,Yes,6.5,6,Single,1,Medium-Low,0,0,42,1,1,2,-0.5584093638934816,-0.6511112791349283,12.019498,7.3396287
+19,Male,Undergraduate,India,7.2,TikTok,Yes,5.7,4,Single,1,High,1,2,39,6,1,2,-2.931148659074372,-0.04909458833797705,12.278974,-0.38040388
+24,Female,Graduate,Switzerland,4.6,Facebook,No,7.2,7,In Relationship,0,Low,0,0,93,0,0,1,1.6453858436990398,-0.8625743576662246,-3.7967045,9.568009
+21,Male,Undergraduate,Turkey,6.8,Instagram,Yes,6.0,5,Single,1,Medium-High,1,2,99,1,1,2,-2.053459362255122,-0.21639065683186723,11.832965,-0.66139996
+23,Female,Graduate,USA,5.3,Twitter,Yes,6.8,6,In Relationship,1,Medium-Low,0,0,102,7,1,1,-0.6825142920495878,-1.335730006049268,11.388289,7.730157
+22,Male,Graduate,Mexico,6.3,Facebook,Yes,6.2,5,Single,1,Medium-High,1,0,61,0,1,2,-1.1118424947219285,-1.7438584670999682,13.173234,7.7052774
+20,Female,Undergraduate,France,4.8,Instagram,No,7.1,7,In Relationship,0,Low,0,2,31,1,0,1,1.0405687272839101,1.638835527699043,-1.2827463,1.9252068
+23,Male,Graduate,Canada,5.7,TikTok,Yes,6.6,6,Single,1,Medium-Low,1,0,18,6,1,2,-0.21912263195021378,-2.406552025804622,12.878391,11.038091
+21,Female,Undergraduate,UK,6.2,Twitter,Yes,6.3,5,Single,1,Medium-High,0,2,101,7,1,2,-2.2234353236462594,0.5312064685293859,13.867138,-2.3265905
+24,Male,Graduate,Italy,4.7,Facebook,No,7.2,7,In Relationship,0,Low,1,0,44,0,0,1,2.0898880785236846,-2.0093291017811183,-3.827921,10.282492
+19,Female,Undergraduate,Russia,6.8,Instagram,Yes,5.9,4,Single,1,High,0,2,82,1,1,2,-2.9000677994313295,1.448503403380313,12.699742,-1.487952
+22,Male,Graduate,China,5.6,WeChat,Yes,6.7,6,In Relationship,1,Medium-Low,1,0,20,9,1,1,-0.39556499051063426,-2.3235799913816155,7.9002943,10.193143
+20,Female,Undergraduate,Japan,4.3,Twitter,No,7.5,8,Single,0,Low,0,2,46,7,0,2,1.4352127077631818,1.5946363358677667,-4.2178454,0.6771655
+23,Male,Graduate,Poland,6.2,TikTok,Yes,6.3,5,Single,1,Medium-High,1,0,78,6,1,2,-1.2994512369993299,-2.4492834330934605,12.397731,8.181671
+21,Female,Undergraduate,Finland,4.4,Instagram,No,7.4,7,In Relationship,0,Low,0,2,30,1,0,1,1.4429821556549707,1.323223891989691,-1.1900584,1.8370183
+24,Male,Graduate,Spain,6.5,Facebook,Yes,6.1,5,Single,1,Medium-High,1,0,90,0,1,2,-1.145320597889608,-2.472662010008499,12.864135,7.9640007
+19,Female,Undergraduate,Denmark,4.6,Twitter,No,7.3,7,In Relationship,0,Low,0,2,26,7,0,1,0.8100730039847759,1.667642181799444,-1.3595468,2.0812817
+22,Male,Graduate,Ireland,5.8,Instagram,Yes,6.6,6,Single,1,Medium-Low,1,0,42,1,1,2,-0.26261273406490415,-1.6711148683961603,13.447294,7.300181
+20,Female,Undergraduate,India,7.1,TikTok,Yes,5.8,4,Single,1,High,0,2,39,6,1,2,-2.947555674894021,0.6294653796671138,13.583338,-1.5526989
+23,Male,Graduate,Switzerland,4.5,Facebook,No,7.3,7,In Relationship,0,Low,1,0,93,0,0,1,1.8203253805100945,-1.5028348008406616,-4.020373,9.994124
+21,Female,Undergraduate,Turkey,6.7,Instagram,Yes,6.0,5,Single,1,Medium-High,0,2,99,1,1,2,-2.2316667661087317,0.831463301362291,12.903202,-1.6895138
+24,Male,Graduate,USA,5.4,Twitter,Yes,6.8,6,In Relationship,1,Medium-Low,1,0,102,7,1,1,-0.3834497951784562,-2.7633271103302217,11.190228,7.953987
+19,Female,Undergraduate,Mexico,6.4,TikTok,Yes,6.2,5,Single,1,Medium-High,0,2,61,6,1,2,-2.316131184634906,1.2452977396389446,14.092652,-1.8803377
+22,Male,Graduate,France,4.7,Facebook,No,7.2,7,In Relationship,0,Low,1,0,31,0,0,1,1.9188235415217716,-1.276081793627315,-3.767044,10.524007
+20,Female,Undergraduate,Canada,5.6,Instagram,Yes,6.7,6,Single,1,Medium-Low,0,2,18,1,1,2,-0.7643579250053523,1.305552066325546,13.762559,-0.65096545
+23,Male,Graduate,UK,6.3,Twitter,Yes,6.2,5,Single,1,Medium-High,1,0,101,7,1,2,-1.5529370459346106,-2.4852010609420194,12.322216,8.2848835
+21,Female,Undergraduate,Italy,4.8,TikTok,No,7.1,7,In Relationship,0,Low,0,2,44,6,0,1,0.8446560935942686,0.9693779490600669,-1.3823295,2.1261418
+24,Male,Graduate,Russia,6.9,Instagram,Yes,5.9,4,Single,1,High,1,0,82,1,1,2,-1.826054947650676,-2.69668440845375,12.845044,7.957439
+19,Female,Undergraduate,China,5.7,WeChat,Yes,6.7,6,In Relationship,1,Medium-Low,0,2,20,9,1,1,-1.3045095872147732,1.044720315243658,12.044676,1.5814656
+22,Male,Graduate,Japan,4.4,Twitter,No,7.4,8,Single,0,Low,1,0,46,7,0,2,2.1057109854748304,-1.421771193603639,-4.314971,7.7828503
+20,Female,Undergraduate,Poland,6.1,Facebook,Yes,6.4,5,Single,1,Medium-High,0,2,78,0,1,2,-1.7954625145196619,1.326011342351101,12.89873,-1.6946586
+23,Male,Graduate,Finland,4.3,Instagram,No,7.5,7,In Relationship,0,Low,1,0,30,1,0,1,2.2720129543580256,-1.6548841126510598,-3.7475195,10.317624
+21,Female,Undergraduate,Spain,6.4,TikTok,Yes,6.2,5,Single,1,Medium-High,0,2,90,6,1,2,-2.232020061827617,0.5443445656633407,13.831853,-2.2902462
+24,Male,Graduate,Denmark,4.5,Twitter,No,7.3,7,In Relationship,0,Low,1,0,26,7,0,1,1.9607317867239586,-2.4601444169994204,-3.1900835,8.411999
+19,Female,Undergraduate,Ireland,5.9,Instagram,Yes,6.5,6,Single,1,Medium-Low,0,2,42,1,1,2,-1.2125006257854816,1.6867362823313858,13.698023,-0.82141864
+22,Male,Graduate,India,7.2,Facebook,Yes,5.7,4,Single,1,High,1,0,39,0,1,2,-1.9817133039735337,-2.0077980499179304,13.1585655,7.6961894
+20,Female,Undergraduate,Switzerland,4.6,TikTok,No,7.2,7,In Relationship,0,Low,0,2,93,6,0,1,0.5750933955806793,1.4758722500005237,-1.3851415,2.2841666
+23,Male,Graduate,Turkey,6.8,Instagram,Yes,6.0,5,Single,1,Medium-High,1,0,99,1,1,2,-1.5202251933806448,-2.1744950722113865,12.867854,7.9286447
+21,Female,Undergraduate,USA,5.3,Twitter,Yes,6.8,6,In Relationship,1,Medium-Low,0,2,102,7,1,1,-1.2157484609240654,0.6223744093302516,10.846955,1.8898437
+24,Male,Graduate,Mexico,6.2,Facebook,Yes,6.3,5,Single,1,Medium-High,1,0,61,0,1,2,-0.7908620481911812,-2.484194996858231,12.970369,7.8657007
+19,Female,Undergraduate,France,4.7,Instagram,No,7.2,7,In Relationship,0,Low,0,2,31,1,0,1,0.9989778947620912,2.037728436201165,-1.1529573,1.9411898
+22,Male,Graduate,Canada,5.8,TikTok,Yes,6.6,6,Single,1,Medium-Low,1,0,18,6,1,2,-0.37830269044700066,-2.0355094862354264,12.856025,11.079271
+20,Female,Undergraduate,UK,6.1,Twitter,Yes,6.4,5,Single,1,Medium-High,0,2,101,7,1,2,-2.2650261561680782,0.9300993770315084,13.926068,-2.3633544
+23,Male,Graduate,Italy,4.8,Facebook,No,7.1,7,In Relationship,0,Low,1,0,44,0,0,1,1.8897647250104588,-1.6487357181096505,-3.8338964,10.356089
+21,Female,Undergraduate,Russia,6.7,Instagram,Yes,6.0,4,Single,1,High,0,2,82,1,1,2,-2.579087352900582,0.7081668736220501,12.814703,-1.6067019
+24,Male,Graduate,China,5.5,WeChat,Yes,6.8,6,In Relationship,1,Medium-Low,1,0,20,9,1,1,-0.07458454397988695,-3.0639165211398787,7.880701,10.243898
+19,Female,Undergraduate,Japan,4.2,Twitter,No,7.5,8,Single,0,Low,0,2,46,7,0,2,1.3526785802249242,1.9830800884721613,-4.2538996,0.6380597
+22,Male,Graduate,Poland,6.3,TikTok,Yes,6.2,5,Single,1,Medium-High,1,0,78,6,1,2,-1.4995745905125548,-2.0886900494219924,12.36516,8.308072
+20,Female,Undergraduate,Finland,4.4,Instagram,No,7.4,7,In Relationship,0,Low,0,2,30,1,0,1,1.3221250626374483,1.7029670380764863,-1.237557,2.0101275
+23,Male,Graduate,Spain,6.5,Facebook,Yes,6.1,5,Single,1,Medium-High,1,0,90,0,1,2,-1.26617769090713,-2.0929188639217036,12.951158,7.9326153
+21,Female,Undergraduate,Denmark,4.6,Twitter,No,7.3,7,In Relationship,0,Low,0,2,26,7,0,1,1.0517871900198204,0.9081558896258538,-1.3905158,2.0993586
+24,Male,Graduate,Ireland,5.9,Instagram,Yes,6.5,6,Single,1,Medium-Low,1,0,42,1,1,2,-0.1001648085255629,-2.449750922985078,13.131542,7.722108
+19,Female,Undergraduate,India,7.0,TikTok,Yes,5.8,4,Single,1,High,0,2,39,6,1,2,-3.0300898024322787,1.0179091322715084,13.475434,-1.474481
+22,Male,Graduate,Switzerland,4.5,Facebook,No,7.3,7,In Relationship,0,Low,1,0,93,0,0,1,1.6994682874925724,-1.1230916547538663,-4.083729,10.017474
+20,Female,Undergraduate,Turkey,6.6,Instagram,Yes,6.1,5,Single,1,Medium-High,0,2,99,1,1,2,-2.2732575986305505,1.2303562098644134,12.747016,-1.6108768
+23,Male,Graduate,USA,5.5,Twitter,Yes,6.7,6,In Relationship,1,Medium-Low,1,0,102,7,1,1,-0.5835731486916811,-2.4027337266587536,11.1807,7.9570436
+21,Female,Undergraduate,Mexico,6.3,TikTok,Yes,6.2,5,Single,1,Medium-High,0,2,61,6,1,2,-2.0360940331205963,0.4945120539829543,13.855566,-2.0169914
+24,Male,Graduate,France,4.8,Facebook,No,7.1,7,In Relationship,0,Low,1,0,31,0,0,1,2.081271467061113,-2.0547178482162325,-3.7846582,10.378797
+19,Female,Undergraduate,Canada,5.7,Instagram,Yes,6.6,6,Single,1,Medium-Low,0,2,18,1,1,2,-0.964481278518578,1.6661454499970136,13.7819605,-0.66169566
+22,Male,Graduate,UK,6.2,Twitter,Yes,6.3,5,Single,1,Medium-High,1,0,101,7,1,2,-1.59452787845643,-2.0863081524398974,12.255801,8.411878
+20,Female,Undergraduate,Italy,4.7,TikTok,No,7.2,7,In Relationship,0,Low,0,2,44,6,0,1,0.8030652610724496,1.368270857562189,-1.4484552,2.139469
+23,Male,Graduate,Russia,6.8,Instagram,Yes,5.9,4,Single,1,High,1,0,82,1,1,2,-1.9085890751889334,-2.3082406558493553,12.86687,7.938264
+21,Female,Undergraduate,China,5.6,WeChat,Yes,6.7,6,In Relationship,1,Medium-Low,0,2,20,9,1,1,-1.024472435700464,0.29393462958766725,11.811518,1.6944677
+24,Male,Graduate,Japan,4.3,Twitter,No,7.5,8,Single,0,Low,1,0,46,7,0,2,2.4266914320055784,-2.1621077233619017,-4.237118,7.930313
+19,Female,Undergraduate,Poland,6.2,Facebook,Yes,6.3,5,Single,1,Medium-High,0,2,78,0,1,2,-1.9955858680328877,1.686604726022569,12.890675,-1.6688867

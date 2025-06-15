@@ -1,1 +1,16 @@
 # Contains all libraries that are needed for this project
+pandas
+matplotlib
+seaborn
+numpy
+scikit-learn
+scipy
+statsmodels
+plotly
+plotly-express
+dash
+nbformat>=4.2.0
+streamlit
+pandas
+numpy
+plotly
