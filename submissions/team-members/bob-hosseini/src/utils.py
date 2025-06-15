@@ -19,6 +19,45 @@ from mlflow.models.signature import infer_signature
 from sklearn.dummy import DummyClassifier
 from sklearn.model_selection import cross_validate
 from sklearn.pipeline import Pipeline
+from sklearn.model_selection import GridSearchCV
+from sklearn.metrics import classification_report, confusion_matrix
+# import pandas as pd
+# from sklearn.model_selection import train_test_split
+from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.pipeline import Pipeline
+# from sklearn.compose import ColumnTransformer
+# from sklearn.preprocessing import FunctionTransformer, OneHotEncoder, StandardScaler
+# from sklearn.linear_model import LogisticRegression
+from scipy import sparse
+import shap
+from sklearn.metrics import (
+    accuracy_score,
+    classification_report,
+    confusion_matrix,
+    f1_score,
+    precision_score,
+    recall_score,
+    roc_auc_score
+)
+
+
+# ======== Warnings ========
+from sklearn.exceptions import ConvergenceWarning
+from sklearn.exceptions import UndefinedMetricWarning
+import warnings
+warnings.filterwarnings("ignore", category=ConvergenceWarning)
+warnings.filterwarnings("ignore", category=RuntimeWarning)
+warnings.filterwarnings("ignore", category=UndefinedMetricWarning)
+warnings.filterwarnings(
+    "ignore",
+    message="Hint: Inferred schema contains integer column"
+)
+warnings.filterwarnings(
+    "ignore",
+    message="Hint: Inferred schema contains integer column"
+)
+
+
 
 # ================== Data preprocessing ==================
 def create_binary_conflict(df, target_column='Conflicts', threshold=None, visualize=True):
@@ -238,13 +277,6 @@ def map_to_continent(df, visualize=False):
     return df
 
 
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.base import BaseEstimator, TransformerMixin
-from sklearn.pipeline import Pipeline
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import FunctionTransformer, OneHotEncoder, StandardScaler
-from sklearn.linear_model import LogisticRegression
 
 # Transformer to group rare categories into "Other"
 class RareCategoryGrouper(BaseEstimator, TransformerMixin):
@@ -393,85 +425,7 @@ def mlflow_dataset(X_train_full, X_test):
     )
     return {"train_ds": train_ds, "test_ds": test_ds}
 
-
-def run_and_register_dummy_baseline(
-    X_train_full,
-    y_train_full,
-    preprocessor,
-    strategy: str,
-    cv,
-    scoring,
-    dataset,
-    registered_model_name: str = "conflict_baseline_dummy"
-):
-    """
-    Runs cross‐validation for a single DummyClassifier strategy, logs metrics to MLflow,
-    refits on the full training set, and registers the model.
-
-    Parameters:
-    - X_train_full, y_train_full: training data
-    - preprocessor: sklearn Pipeline or ColumnTransformer for feature prep
-    - strategy: one of DummyClassifier strategies ("most_frequent", "stratified", "uniform", "prior")
-    - cv: cross‐validation splitter (e.g., StratifiedKFold instance)
-    - experiment_name: MLflow experiment under which runs are logged
-    - registered_model_name: name to register the final model in MLflow
-    """
-    
-    run_name = f"baseline_dummy_{strategy}_cv"
-    with mlflow.start_run(run_name=run_name):
-        # Log inputs
-        mlflow.log_input(dataset["train_ds"], context="training")    
-        mlflow.log_input(dataset["test_ds"], context="test")
-
-        # build pipeline
-        baseline_pipeline = Pipeline([
-            ("preprocessing", preprocessor),
-            ("classifier", DummyClassifier(strategy=strategy))
-        ])
-
-        # log strategy
-        mlflow.log_param("strategy", strategy)
-
-        # cross‐validate
-        cv_results = cross_validate(
-            estimator=baseline_pipeline,
-            X=X_train_full,
-            y=y_train_full,
-            cv=cv,
-            scoring=scoring,
-            return_train_score=False,
-            n_jobs=-1
-        )
-
-        # log mean and std for each metric
-        for metric in scoring:
-            scores = cv_results[f"test_{metric}"]
-            mlflow.log_metric(metric,      scores.mean())
-            mlflow.log_metric(f"{metric}_std", scores.std())
-
-        # raw fold scores as artifact
-        with open("cv_fold_scores.json", "w") as fp:
-            json.dump({k: v.tolist() for k, v in cv_results.items()}, fp)
-        mlflow.log_artifact("cv_fold_scores.json")
-
-        # refit on full training data
-        baseline_pipeline.fit(X_train_full, y_train_full)
-
-        # infer signature and example
-        example_input = X_train_full.iloc[:5]
-        example_preds = baseline_pipeline.predict(example_input)
-        signature = infer_signature(example_input, example_preds)
-
-        # log & register
-        mlflow.sklearn.log_model(
-            sk_model=baseline_pipeline,
-            name=f"baseline_model_cv_{strategy}",
-            registered_model_name=f"{registered_model_name}_{strategy}",
-            signature=signature,
-            input_example=example_input
-        )
-
-
+# The function to run a classification experiment
 def run_classification_experiment(
     name: str,
     estimator,                # e.g. Pipeline([('preproc', preprocessor), ('clf', LogisticRegression(...))])
@@ -518,3 +472,218 @@ def run_classification_experiment(
             signature=signature,
             input_example=example_input
         )
+
+
+
+
+# ===============================
+# SHAP
+# ===============================
+def run_shap_experiment(
+    best_model,
+    X_train_full,
+    feature_perturbation="interventional",
+    plot_type="bar",
+    shap_type="linear"
+):
+    # 1. Extract best model and its preprocessing step
+    # best_model = grid_search_result.best_estimator_
+    preprocessor = best_model.named_steps['preprocessing']
+    classifier   = best_model.named_steps['classifier']
+
+    # 2. Prepare data for SHAP
+    #    Use a subset of training data (or validation) for faster computation
+    X_shap_raw = X_train_full.sample(n=200, random_state=42)
+    # Transform to model inputs
+    X_shap_proc = preprocessor.transform(X_shap_raw)
+    if sparse.issparse(X_shap_proc):
+        X_shap_proc = X_shap_proc.toarray()
+
+    # Recover feature names
+    feature_names = get_feature_names(preprocessor)
+    X_shap_df = pd.DataFrame(X_shap_proc, columns=feature_names)
+
+    if shap_type == "linear":    
+        # Initialize a SHAP explainer
+        explainer = shap.LinearExplainer(
+            model=classifier,
+            masker=X_shap_df,
+            feature_perturbation=feature_perturbation   # supported: "interventional" or "correlation_dependent"
+        )
+    else:
+        explainer = shap.TreeExplainer(
+            model=classifier,              # the XGBClassifier instance
+            data=X_shap_df,                # background data for expected values
+            feature_perturbation=feature_perturbation  # optional
+        )
+
+    # Compute SHAP values
+    shap_values = explainer.shap_values(X_shap_df)
+
+    # Summary plot for the positive class (if binary)
+    plt.figure(figsize=(10, 6))
+    shap.summary_plot(
+        shap_values, X_shap_df, plot_type=plot_type, show=False
+    )
+    plt.title("SHAP Summary Plot")
+    # plt.show()
+    fig_sum = plt.gcf()
+    plt.close(fig_sum)
+    return fig_sum
+
+# ===============================
+# log_test_set_performance
+# ===============================
+
+def log_test_set_performance(
+    model,
+    X_test,
+    y_test,
+    prefix: str = "test"
+):
+    """
+    Evaluate `model` on (X_test, y_test), compute common metrics,
+    a confusion matrix plot, and a text classification report,
+    then log everything into the active MLflow run.
+    """
+    # 1) Predictions & probabilities
+    y_pred  = model.predict(X_test)
+    proba    = model.predict_proba(X_test)[:, 1]
+
+    # 2) Compute metrics
+    metrics = {
+        f"{prefix}_accuracy":   accuracy_score(y_test, y_pred),
+        f"{prefix}_precision":  precision_score(y_test, y_pred),
+        f"{prefix}_recall":     recall_score(y_test, y_pred),
+        f"{prefix}_f1_score":   f1_score(y_test, y_pred),
+        f"{prefix}_roc_auc":    roc_auc_score(y_test, proba),
+    }
+    # 3) Log metrics
+    for name, val in metrics.items():
+        mlflow.log_metric(name, round(val, 2))
+
+    # 4) Classification report
+    report = classification_report(y_test, y_pred)
+    report_path = f"{prefix}_classification_report.txt"
+    with open(report_path, "w") as f:
+        f.write(report)
+    mlflow.log_artifact(report_path)
+
+    # 5) Confusion matrix plot
+    cm = confusion_matrix(y_test, y_pred)
+    fig, ax = plt.subplots(figsize=(4, 4))
+    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", ax=ax)
+    ax.set_xlabel("Predicted")
+    ax.set_ylabel("Actual")
+    ax.set_title(f"{prefix.capitalize()} Confusion Matrix")
+    plt.tight_layout()
+    cm_path = f"{prefix}_confusion_matrix.png"
+    fig.savefig(cm_path)
+    plt.close(fig)
+    mlflow.log_artifact(cm_path)
+
+
+
+
+# ===============================
+# Grid Search
+# ===============================
+
+def run_classification_gridsearch_experiment(
+    name: str,
+    pipeline,               # e.g. Pipeline([... , ('classifier', LogisticRegression())])
+    param_grid: dict,
+    X_train, y_train, X_test, y_test,
+    cv,                     # e.g. StratifiedKFold(...)
+    scoring,                # e.g. {"accuracy":"accuracy", "f1_score":"f1", ...}
+    dataset: dict,          # {"train_ds": X_train_full, "test_ds": X_test}
+    registered_model_name: str,
+    verbose: bool = False,
+    feature_set: str = "all"
+):
+    grid_search = GridSearchCV(
+        estimator=pipeline,        # your Pipeline([... ('classifier', LogisticRegression()) ])
+        param_grid=param_grid,
+        cv=cv,                         # 5-fold stratified CV
+        scoring=scoring,            # primary metric
+        n_jobs=-1,                    # parallelize across all cores
+        return_train_score=True,
+        refit='f1_score',            # ← what to optimize/return as best_estimator_
+        error_score=np.nan,  # treat fold‐errors as NaN rather than crashing
+        verbose=1
+    )
+
+    with mlflow.start_run(run_name=name):
+        # 1) Log dataset inputs
+        mlflow.log_input(dataset["train_ds"], context="training")
+        mlflow.log_input(dataset["test_ds"],  context="test")
+
+        # 2) Log the grid search hyperparameter space
+        mlflow.log_param("grid_search_params", param_grid)
+        
+        # Log the feature set
+        mlflow.log_param("feature_set", feature_set)
+
+        grid_search.fit(X_train, y_train)
+
+        # 4) Log the best hyperparameters
+        best_params = grid_search.best_params_
+        mlflow.log_param("hyperparameters", best_params)
+
+        # 5) Log CV metrics (mean ± std) for each scoring key
+        results = grid_search.cv_results_
+        # if scoring is a dict, iterate its keys; else assume single metric
+        for metric in scoring:
+            mean_score = results[f"mean_test_{metric}"][grid_search.best_index_]
+            std_score  = results[f"std_test_{metric}"][grid_search.best_index_]
+            mlflow.log_metric(metric, mean_score.round(2))
+            mlflow.log_metric(f"{metric}_std", std_score)
+            if verbose:
+                print(f"{metric}: {mean_score.round(2)} ± {std_score}")
+
+        # 6) Log and register the best estimator
+        best_estimator = grid_search.best_estimator_
+        example_input = X_train.iloc[:5]
+        example_preds = best_estimator.predict(example_input)
+        signature = infer_signature(example_input, example_preds)
+        
+        # Adding shap to the model
+        if 'baseline' not in name:
+            if 'logreg' in name:
+                shap_type = "linear"
+            else:
+                shap_type = "tree"
+            fig_sum = run_shap_experiment(
+                best_model=best_estimator,
+                X_train_full=X_train,
+                feature_perturbation="interventional",
+                plot_type="violin", # other options: "bar", "dot", "violin"
+                shap_type=shap_type
+            )
+            mlflow.log_figure(fig_sum, "shap_summary.png")
+
+        # Log test set performance
+        log_test_set_performance(
+            model=best_estimator,
+            X_test=X_test,
+            y_test=y_test,
+            prefix="test"
+        )
+
+        # 7) Log the best estimator
+        mlflow.sklearn.log_model(
+            sk_model=best_estimator,
+            name=name,
+            registered_model_name=registered_model_name,
+            signature=signature,
+            input_example=example_input
+        )
+    if verbose:
+        # 3. Print summary in the output cell
+        print("Best parameters:", grid_search.best_params_)
+        print("Best F1 score (CV):", grid_search.best_score_)
+
+        # 4. (Optional) inspect all CV results
+        cv_df = pd.DataFrame(grid_search.cv_results_)
+        display(cv_df.sort_values("mean_test_f1_score", ascending=False).head(3))
+    return best_estimator, grid_search
